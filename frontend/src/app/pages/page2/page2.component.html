@@ -1,0 +1,30 @@
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+  <div formArrayName="employees">
+    <div *ngFor="let employee of employees().controls; let i = index">
+      <div [formGroupName]="i">
+        <div class="input-group">
+          <span class="input-group-text">Name</span>
+          <input type="text" formControlName="firstName" class="form-control" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">LastName</span>
+          <input type="text" formControlName="lastName" class="form-control" />
+        </div>
+
+        <button (click)="removeEmployee(i)" class="btn btn-dark">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </p>
+</form>
+
+<p>
+  <button type="button" (click)="addEmployee()" class="btn btn-warning">
+    Add Employee
+  </button>
+</p>
+
+{{ this.empForm.value | json }}

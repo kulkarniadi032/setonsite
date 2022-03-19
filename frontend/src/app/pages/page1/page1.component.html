@@ -1,0 +1,395 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card shadow">
+        <div class="card-header text-center fw-bold fs-5">
+          TEST CERTIFICATE PAGE 1
+        </div>
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="createPage1Data(form)">
+            <div class="input-group">
+              <div class="input-group-text">NAME OF CUSTOMER</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="name"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('name')?.valid && form.get('name')?.touched,
+                  'is-valid':
+                    form.get('name')?.valid && form.get('name')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter name of customer</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">NAME OF SUBSTATION/SITE</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="subStationName"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('subStationName')?.valid &&
+                    form.get('subStationName')?.touched,
+                  'is-valid':
+                    form.get('subStationName')?.valid &&
+                    form.get('subStationName')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter name of substation/site</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">WORK ORDER NO.</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="orderNo"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('orderNo')?.valid && form.get('orderNo')?.touched,
+                  'is-valid':
+                    form.get('orderNo')?.valid && form.get('orderNo')?.touched
+                }"
+              />
+              <span class="invalid-feedback">Please enter work order no.</span>
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">CERTIFICATE NO.</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="certificateNo"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('certificateNo')?.valid &&
+                    form.get('certificateNo')?.touched,
+                  'is-valid':
+                    form.get('certificateNo')?.valid &&
+                    form.get('certificateNo')?.touched
+                }"
+              />
+              <span class="invalid-feedback">Please enter certificate no.</span>
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">TRANSFORMER MAKE</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="transformerMake"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('transformerMake')?.valid &&
+                    form.get('transformerMake')?.touched,
+                  'is-valid':
+                    form.get('transformerMake')?.valid &&
+                    form.get('transformerMake')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter transformer make</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">SERIAL NO.</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="serialNo"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('serialNo')?.valid &&
+                    form.get('serialNo')?.touched,
+                  'is-valid':
+                    form.get('serialNo')?.valid && form.get('serialNo')?.touched
+                }"
+              />
+              <span class="invalid-feedback">Please enter serial no</span>
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">RATING</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="rating"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('rating')?.valid && form.get('rating')?.touched,
+                  'is-valid':
+                    form.get('rating')?.valid && form.get('rating')?.touched
+                }"
+              />
+              <span class="invalid-feedback">Please enter rating</span>
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">REFERANCE STANDRAD</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="referanceStandard"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('referanceStandard')?.valid &&
+                    form.get('referanceStandard')?.touched,
+                  'is-valid':
+                    form.get('referanceStandard')?.valid &&
+                    form.get('referanceStandard')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter referance standrad</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">TESTING DATE</span>
+              <input
+                type="date"
+                class="form-control"
+                formControlName="testingDate"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('testingDate')?.valid &&
+                    form.get('testingDate')?.touched,
+                  'is-valid':
+                    form.get('testingDate')?.valid &&
+                    form.get('testingDate')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter name of testing date</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text">REMARKS</span>
+              <textarea
+                class="form-control"
+                formControlName="remarks"
+                [ngClass]="{
+                  'is-invalid':
+                    !form.get('remarks')?.valid && form.get('remarks')?.touched,
+                  'is-valid':
+                    form.get('remarks')?.valid && form.get('remarks')?.touched
+                }"
+              ></textarea>
+              <span class="invalid-feedback">Please enter name of remarks</span>
+            </div>
+            <div class="d-flex justify-content-between mt-5">
+              <div>
+                <h3 class="fw-bold">TESTED BY:</h3>
+                <div class="input-group">
+                  <span class="input-group-text">Name</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="testedByName"
+                    [ngClass]="{
+                      'is-invalid':
+                        !form.get('testedByName')?.valid &&
+                        form.get('testedByName')?.touched,
+                      'is-valid':
+                        form.get('testedByName')?.valid &&
+                        form.get('testedByName')?.touched
+                    }"
+                  />
+                  <span class="invalid-feedback"
+                    >Please enter tested by name</span
+                  >
+                </div>
+                <div class="input-group mt-2">
+                  <span class="input-group-text">Designation</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="testedByDesignation"
+                    [ngClass]="{
+                      'is-invalid':
+                        !form.get('testedByDesignation')?.valid &&
+                        form.get('testedByDesignation')?.touched,
+                      'is-valid':
+                        form.get('testedByDesignation')?.valid &&
+                        form.get('testedByDesignation')?.touched
+                    }"
+                  />
+                  <span class="invalid-feedback"
+                    >Please enter tested by person's designation</span
+                  >
+                </div>
+                <div class="input-group mt-2">
+                  <span class="input-group-text">Company Name</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="testedByComName"
+                    [ngClass]="{
+                      'is-invalid':
+                        !form.get('testedByComName')?.valid &&
+                        form.get('testedByComName')?.touched,
+                      'is-valid':
+                        form.get('testedByComName')?.valid &&
+                        form.get('testedByComName')?.touched
+                    }"
+                  />
+                  <span class="invalid-feedback"
+                    >Please enter tested by company name</span
+                  >
+                </div>
+                <div class="input-group mt-2">
+                  <span class="input-group-text">Place</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="testedByPlace"
+                    [ngClass]="{
+                      'is-invalid':
+                        !form.get('testedByPlace')?.valid &&
+                        form.get('testedByPlace')?.touched,
+                      'is-valid':
+                        form.get('testedByPlace')?.valid &&
+                        form.get('testedByPlace')?.touched
+                    }"
+                  />
+                  <span class="invalid-feedback">Please enter place</span>
+                </div>
+              </div>
+              <!-- witness by form start here -->
+              <div>
+                <h3 class="fw-bold">WITNESS BY:</h3>
+                <form [formGroup]="witnessByForm">
+                  <div formArrayName="witnessBy">
+                    <div
+                      *ngFor="let item of witnessBy().controls; let i = index"
+                    >
+                      <div [formGroupName]="i">
+                        <div class="input-group">
+                          <span class="input-group-text">Name</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            formControlName="witnessByName"
+                            [ngClass]="{
+                              'is-invalid':
+                                !witnessByForm.get('witnessByName')?.valid &&
+                                witnessByForm.get('witnessByName')?.touched,
+                              'is-valid':
+                                witnessByForm.get('witnessByName')?.valid &&
+                                witnessByForm.get('witnessByName')?.touched
+                            }"
+                          />
+                          <span class="invalid-feedback"
+                            >Please enter witness by name</span
+                          >
+                        </div>
+                        <div class="input-group mt-2">
+                          <span class="input-group-text">Designation</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            formControlName="witnessByDesignation"
+                          />
+                          <span class="invalid-feedback"
+                            >Please enter witness by person's designation</span
+                          >
+                        </div>
+                        <div class="input-group mt-2">
+                          <span class="input-group-text">Company Name</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            formControlName="witnessByComName"
+                          />
+                          <span class="invalid-feedback"
+                            >Please enter witness by company name</span
+                          >
+                        </div>
+                        <div class="input-group mt-2">
+                          <span class="input-group-text">Place</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            formControlName="witnessByPlace"
+                          />
+                          <span class="invalid-feedback"
+                            >Please enter place</span
+                          >
+                        </div>
+                        <div class="text-center mt-2">
+                          <button
+                            (click)="removeWitnessBy(i)"
+                            class="btn btn-dark"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button
+                      type="button"
+                      (click)="addWitnessBy()"
+                      class="btn btn-warning"
+                    >
+                      Add witness By
+                    </button>
+                  </div>
+                  <!-- <div class="text-center">
+                    <button
+                      class="btn btn-primary mt-2"
+                      type="submit"
+                      [disabled]="isWitnessBy"
+                    >
+                      Confirm Witness By
+                    </button>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+            <button class="btn btn-success w-100 mt-3">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    {{ this.witnessByForm.value | json }}
+    <table class="table table-bordered shadow mt-5">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>orderNo</th>
+          <th>subStationName</th>
+          <th>certificateNo</th>
+          <th>transformerMake</th>
+          <th>serialNo</th>
+          <th>rating</th>
+          <th>referanceStandard</th>
+          <th>testingDate</th>
+          <th>remarks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allPage1DataArr; let i = index">
+          <td>{{ item.name }}</td>
+          <td>{{ item.orderNo }}</td>
+          <td>{{ item.subStationName }}</td>
+          <td>{{ item.certificateNo }}</td>
+          <td>{{ item.transformerMake }}</td>
+          <td>{{ item.serialNo }}</td>
+          <td>{{ item.rating }}</td>
+          <td>{{ item.referanceStandard }}</td>
+          <td>{{ item.testingDate }}</td>
+          <td>{{ item.remarks }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deletePage1Data(item._id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
