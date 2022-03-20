@@ -1,0 +1,240 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr class="bg-primary text-light">
+            <th></th>
+            <th>SR.NO</th>
+            <th>TEST PERFORMED</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MEASUREMENT OF INSULATION RESISTANCE"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>1</td>
+            <td>MEASUREMENT OF INSULATION RESISTANCE</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MEASUREMENT OF VOLTAGE RATIO"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>2</td>
+            <td>MEASUREMENT OF VOLTAGE RATIO</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MAGNETIC BALANCE AND MAGNETISING CURRENT TEST"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>3</td>
+            <td>MAGNETIC BALANCE AND MAGNETISING CURRENT TEST</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MEASUREMENT OF WINDING RESISTANCE"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>4</td>
+            <td>MEASUREMENT OF WINDING RESISTANCE</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="VECTOR GROUP TEST"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>5</td>
+            <td>VECTOR GROUP TEST</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MEASUREMENT OF NO LOAD LOSS AND NO LOAD CURRENT"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>6</td>
+            <td>MEASUREMENT OF NO LOAD LOSS AND NO LOAD CURRENT</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MEASUREMENT OF LOAD LOSS AND IMPEDANCE"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>7</td>
+            <td>MEASUREMENT OF LOAD LOSS AND IMPEDANCE</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="SEPARATE SOURCE VOLTAGE WITHSTAND TEST"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>8</td>
+            <td>SEPARATE SOURCE VOLTAGE WITHSTAND TEST</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="OIL BDV"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>9</td>
+            <td>OIL BDV</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="INDUCED OVER VOLTAGE TEST"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>10</td>
+            <td>INDUCED OVER VOLTAGE TEST</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MEASUREMENT OF CAPACITANCE AND TAN OF WINDING"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>11</td>
+            <td>MEASUREMENT OF CAPACITANCE AND TAN OF WINDING</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="MEASUREMENT OF BUSHINGS"
+                  id="flexCheckDefault"
+                  (change)="isCheckTest($event)"
+                />
+              </div>
+            </td>
+            <td>12</td>
+            <td>MEASUREMENT OF BUSHINGS</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-center">
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#isConformModal"
+        >
+          Please Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="isConformModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title fw-bold fs-5" id="exampleModalLabel">
+          Please confirm your test
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of isCheckTestArr">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
