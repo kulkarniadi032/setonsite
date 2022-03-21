@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThirdPageService } from 'src/app/services/third-page.service';
 
 @Component({
   selector: 'app-page3',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page3.component.css'],
 })
 export class Page3Component implements OnInit {
-  constructor() {}
+  constructor(private page3: ThirdPageService) {}
 
   ngOnInit(): void {}
 
@@ -32,5 +33,6 @@ export class Page3Component implements OnInit {
       // console.log(this.isCheckTestArr);
     }
     this.isCheckTestArr.sort((a: any, b: any) => a.srNo - b.srNo);
+    this.page3.dataFrompage3(this.isCheckTestArr);
   }
 }
