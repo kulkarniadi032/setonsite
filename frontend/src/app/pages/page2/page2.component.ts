@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormArray,
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-page2',
@@ -13,38 +7,24 @@ import {
   styleUrls: ['./page2.component.css'],
 })
 export class Page2Component implements OnInit {
-  empForm: FormGroup;
+  constructor() {}
 
-  constructor(private fb: FormBuilder) {
-    this.empForm = this.fb.group({
-      employees: this.fb.array([]),
-    });
-  }
-  ngOnInit(): void {
-    // throw new Error('Method not implemented.');
-  }
-
-  employees(): FormArray {
-    return this.empForm.get('employees') as FormArray;
-  }
-
-  newEmployee(): FormGroup {
-    return this.fb.group({
-      firstName: '',
-      lastName: '',
-    });
-  }
-
-  addEmployee() {
-    console.log('Adding a employee');
-    this.employees().push(this.newEmployee());
-  }
-
-  removeEmployee(id: number) {
-    this.employees().removeAt(id);
-  }
-
-  onSubmit() {
-    console.log(this.empForm.value);
+  ngOnInit(): void {}
+  page2Form = new FormGroup({
+    type: new FormControl('', [Validators.required]),
+    reatedCapacity: new FormControl('', [Validators.required]),
+    reatedVoltageHV: new FormControl('', [Validators.required]),
+    reatedVoltageLV: new FormControl('', [Validators.required]),
+    reatedCurrentHV: new FormControl('', [Validators.required]),
+    reatedCurrentLV: new FormControl('', [Validators.required]),
+    reatedFrequency: new FormControl('', [Validators.required]),
+    vectorGroup: new FormControl('', [Validators.required]),
+    positiveTaps: new FormControl('', [Validators.required]),
+    negativeTaps: new FormControl('', [Validators.required]),
+    steps: new FormControl('', [Validators.required]),
+  });
+  page2FormData(data: any) {
+    console.log(data.value);
+    this.page2Form.reset();
   }
 }

@@ -1,30 +1,233 @@
-<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
-  <div formArrayName="employees">
-    <div *ngFor="let employee of employees().controls; let i = index">
-      <div [formGroupName]="i">
-        <div class="input-group">
-          <span class="input-group-text">Name</span>
-          <input type="text" formControlName="firstName" class="form-control" />
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-header text-center bg-secondary text-light fs-5">
+          TEST CERTIFICATE PAGE2
         </div>
-        <div class="input-group">
-          <span class="input-group-text">LastName</span>
-          <input type="text" formControlName="lastName" class="form-control" />
+        <div class="card-body">
+          <form [formGroup]="page2Form" (ngSubmit)="page2FormData(page2Form)">
+            <div class="input-group">
+              <div class="input-group-text">TYPE</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="type"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('type')?.valid &&
+                    page2Form.get('type')?.touched,
+                  'is-valid':
+                    page2Form.get('type')?.valid &&
+                    page2Form.get('type')?.touched
+                }"
+              />
+              <span class="invalid-feedback">Please enter type</span>
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-text">REATED CAPACITY</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reatedCapacity"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('reatedCapacity')?.valid &&
+                    page2Form.get('reatedCapacity')?.touched,
+                  'is-valid':
+                    page2Form.get('reatedCapacity')?.valid &&
+                    page2Form.get('reatedCapacity')?.touched
+                }"
+              />
+              <span class="invalid-feedback">Please enter reated capacity</span>
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-text">REATED VOLTAGE HV</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reatedVoltageHV"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('reatedVoltageHV')?.valid &&
+                    page2Form.get('reatedVoltageHV')?.touched,
+                  'is-valid':
+                    page2Form.get('reatedVoltageHV')?.valid &&
+                    page2Form.get('reatedVoltageHV')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter reated voltage HV</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-text">REATED VOLTAGE LV</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reatedVoltageLV"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('reatedVoltageLV')?.valid &&
+                    page2Form.get('reatedVoltageLV')?.touched,
+                  'is-valid':
+                    page2Form.get('reatedVoltageLV')?.valid &&
+                    page2Form.get('reatedVoltageLV')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter reated voltage LV</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-text">REATED CURRENT HV</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reatedCurrentHV"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('reatedCurrentHV')?.valid &&
+                    page2Form.get('reatedCurrentHV')?.touched,
+                  'is-valid':
+                    page2Form.get('reatedCurrentHV')?.valid &&
+                    page2Form.get('reatedCurrentHV')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter reated current HV</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-text">REATED CURRENT LV</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reatedCurrentLV"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('reatedCurrentLV')?.valid &&
+                    page2Form.get('reatedCurrentLV')?.touched,
+                  'is-valid':
+                    page2Form.get('reatedCurrentLV')?.valid &&
+                    page2Form.get('reatedCurrentLV')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter reated current LV</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-text">REATED FREQUENCY</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reatedFrequency"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('reatedFrequency')?.valid &&
+                    page2Form.get('reatedFrequency')?.touched,
+                  'is-valid':
+                    page2Form.get('reatedFrequency')?.valid &&
+                    page2Form.get('reatedFrequency')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter reated frequency</span
+              >
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-text">VECTOER GROUP</div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="vectorGroup"
+                [ngClass]="{
+                  'is-invalid':
+                    !page2Form.get('vectorGroup')?.valid &&
+                    page2Form.get('vectorGroup')?.touched,
+                  'is-valid':
+                    page2Form.get('vectorGroup')?.valid &&
+                    page2Form.get('vectorGroup')?.touched
+                }"
+              />
+              <span class="invalid-feedback">Please enter vector group</span>
+            </div>
+            <div class="mt-3 d-flex justify-content-between">
+              <h4 class="fw-bold">VOLTAGE VARIATION</h4>
+              <div>
+                <h4 class="text-center fw-bold">TAPS PROVIDED ON HV</h4>
+                <div class="d-flex">
+                  <div class="input-group">
+                    <div class="align-self-center fw-bold pe-1">From</div>
+                    <input
+                      type="number"
+                      class="form-control"
+                      [ngStyle]="{ width: '20px' }"
+                      placeholder="+10"
+                      formControlName="positiveTaps"
+                      [ngClass]="{
+                        'is-invalid':
+                          !page2Form.get('positiveTaps')?.valid &&
+                          page2Form.get('positiveTaps')?.touched,
+                        'is-valid':
+                          page2Form.get('positiveTaps')?.valid &&
+                          page2Form.get('positiveTaps')?.touched
+                      }"
+                    />
+                    <div class="input-group-text">%</div>
+                  </div>
+                  <div class="input-group">
+                    <div class="align-self-center fw-bold p-1">to</div>
+                    <input
+                      type="number"
+                      class="form-control"
+                      [ngStyle]="{ width: '20px' }"
+                      placeholder="-10"
+                      formControlName="negativeTaps"
+                      [ngClass]="{
+                        'is-invalid':
+                          !page2Form.get('negativeTaps')?.valid &&
+                          page2Form.get('negativeTaps')?.touched,
+                        'is-valid':
+                          page2Form.get('negativeTaps')?.valid &&
+                          page2Form.get('negativeTaps')?.touched
+                      }"
+                    />
+                    <div class="input-group-text">%</div>
+                  </div>
+                  <div class="input-group">
+                    <div class="align-self-center fw-bold p-1">@</div>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="STEPS"
+                      formControlName="steps"
+                      [ngClass]="{
+                        'is-invalid':
+                          !page2Form.get('steps')?.valid &&
+                          page2Form.get('steps')?.touched,
+                        'is-valid':
+                          page2Form.get('steps')?.valid &&
+                          page2Form.get('steps')?.touched
+                      }"
+                    />
+                    <div class="input-group-text">%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="btn btn-primary mt-4"
+                [disabled]="!page2Form.valid"
+              >
+                SAVE AND NEXT
+              </button>
+            </div>
+          </form>
         </div>
-
-        <button (click)="removeEmployee(i)" class="btn btn-dark">Remove</button>
       </div>
     </div>
   </div>
-
-  <p>
-    <button type="submit" class="btn btn-success">Submit</button>
-  </p>
-</form>
-
-<p>
-  <button type="button" (click)="addEmployee()" class="btn btn-warning">
-    Add Employee
-  </button>
-</p>
-
-{{ this.empForm.value | json }}
+</div>
