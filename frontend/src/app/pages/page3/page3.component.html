@@ -1,3 +1,4 @@
+<!-- ng g c pages/page4 --module app => to generate new component -->
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2">
@@ -18,7 +19,12 @@
                   type="checkbox"
                   value="MEASUREMENT OF INSULATION RESISTANCE"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 1,
+                      test: 'MEASUREMENT OF INSULATION RESISTANCE'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -33,7 +39,12 @@
                   type="checkbox"
                   value="MEASUREMENT OF VOLTAGE RATIO"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 2,
+                      test: 'MEASUREMENT OF VOLTAGE RATIO'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -48,7 +59,12 @@
                   type="checkbox"
                   value="MAGNETIC BALANCE AND MAGNETISING CURRENT TEST"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 3,
+                      test: 'MAGNETIC BALANCE AND MAGNETISING CURRENT TEST'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -63,7 +79,12 @@
                   type="checkbox"
                   value="MEASUREMENT OF WINDING RESISTANCE"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 4,
+                      test: 'MEASUREMENT OF WINDING RESISTANCE'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -78,7 +99,12 @@
                   type="checkbox"
                   value="VECTOR GROUP TEST"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 5,
+                      test: 'VECTOR GROUP TEST'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -93,7 +119,12 @@
                   type="checkbox"
                   value="MEASUREMENT OF NO LOAD LOSS AND NO LOAD CURRENT"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 6,
+                      test: 'MEASUREMENT OF NO LOAD LOSS AND NO LOAD CURRENT'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -108,7 +139,12 @@
                   type="checkbox"
                   value="MEASUREMENT OF LOAD LOSS AND IMPEDANCE"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 7,
+                      test: ' MEASUREMENT OF LOAD LOSS AND IMPEDANCE'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -123,7 +159,12 @@
                   type="checkbox"
                   value="SEPARATE SOURCE VOLTAGE WITHSTAND TEST"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 8,
+                      test: 'SEPARATE SOURCE VOLTAGE WITHSTAND TEST'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -138,7 +179,12 @@
                   type="checkbox"
                   value="OIL BDV"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 9,
+                      test: 'OIL BDV'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -153,7 +199,12 @@
                   type="checkbox"
                   value="INDUCED OVER VOLTAGE TEST"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 10,
+                      test: 'INDUCED OVER VOLTAGE TEST'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -168,7 +219,12 @@
                   type="checkbox"
                   value="MEASUREMENT OF CAPACITANCE AND TAN OF WINDING"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({
+                      srNo: 11,
+                      test: 'MEASUREMENT OF CAPACITANCE AND TAN OF WINDING'
+                    })
+                  "
                 />
               </div>
             </td>
@@ -183,7 +239,9 @@
                   type="checkbox"
                   value="MEASUREMENT OF BUSHINGS"
                   id="flexCheckDefault"
-                  (change)="isCheckTest($event)"
+                  (change)="
+                    isCheckTest({ srNo: 12, test: 'MEASUREMENT OF BUSHINGS' })
+                  "
                 />
               </div>
             </td>
@@ -223,7 +281,7 @@
       <div class="modal-body">
         <ul class="list-group">
           <li class="list-group-item" *ngFor="let item of isCheckTestArr">
-            {{ item }}
+            {{ item.test }}
           </li>
         </ul>
       </div>
@@ -231,7 +289,13 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          [routerLink]="['/tests']"
+          routerLinkActive="router-link-active"
+        >
           Next
         </button>
       </div>

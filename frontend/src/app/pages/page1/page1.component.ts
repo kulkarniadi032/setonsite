@@ -58,6 +58,7 @@ export class Page1Component implements OnInit {
         console.log(returnPage1Data.result);
         this.getAllPage1Data();
       });
+    this.form.reset();
   }
   deletePage1Data(id: any) {
     console.log(id);
