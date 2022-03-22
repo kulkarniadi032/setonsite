@@ -27,114 +27,118 @@
             <div class="input-group mt-3">
               <div class="input-group-text">REATED CAPACITY</div>
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                formControlName="reatedCapacity"
+                formControlName="ratedCapacity"
                 [ngClass]="{
                   'is-invalid':
-                    !page2Form.get('reatedCapacity')?.valid &&
-                    page2Form.get('reatedCapacity')?.touched,
+                    !page2Form.get('ratedCapacity')?.valid &&
+                    page2Form.get('ratedCapacity')?.touched,
                   'is-valid':
-                    page2Form.get('reatedCapacity')?.valid &&
-                    page2Form.get('reatedCapacity')?.touched
+                    page2Form.get('ratedCapacity')?.valid &&
+                    page2Form.get('ratedCapacity')?.touched
                 }"
               />
+              <div class="input-group-text">KVA</div>
               <span class="invalid-feedback">Please enter reated capacity</span>
             </div>
             <div class="input-group mt-3">
               <div class="input-group-text">REATED VOLTAGE HV</div>
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                formControlName="reatedVoltageHV"
+                formControlName="ratedVoltageHV"
                 [ngClass]="{
                   'is-invalid':
-                    !page2Form.get('reatedVoltageHV')?.valid &&
-                    page2Form.get('reatedVoltageHV')?.touched,
+                    !page2Form.get('ratedVoltageHV')?.valid &&
+                    page2Form.get('ratedVoltageHV')?.touched,
                   'is-valid':
-                    page2Form.get('reatedVoltageHV')?.valid &&
-                    page2Form.get('reatedVoltageHV')?.touched
+                    page2Form.get('ratedVoltageHV')?.valid &&
+                    page2Form.get('ratedVoltageHV')?.touched
                 }"
               />
+              <div class="input-group-text">VOLTS</div>
               <span class="invalid-feedback"
-                >Please enter reated voltage HV</span
+                >Please enter rated voltage HV</span
               >
             </div>
             <div class="input-group mt-3">
               <div class="input-group-text">REATED VOLTAGE LV</div>
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                formControlName="reatedVoltageLV"
+                formControlName="ratedVoltageLV"
                 [ngClass]="{
                   'is-invalid':
-                    !page2Form.get('reatedVoltageLV')?.valid &&
-                    page2Form.get('reatedVoltageLV')?.touched,
+                    !page2Form.get('ratedVoltageLV')?.valid &&
+                    page2Form.get('ratedVoltageLV')?.touched,
                   'is-valid':
-                    page2Form.get('reatedVoltageLV')?.valid &&
-                    page2Form.get('reatedVoltageLV')?.touched
+                    page2Form.get('ratedVoltageLV')?.valid &&
+                    page2Form.get('ratedVoltageLV')?.touched
                 }"
               />
+              <div class="input-group-text">VOLTS</div>
               <span class="invalid-feedback"
-                >Please enter reated voltage LV</span
+                >Please enter rated voltage LV</span
               >
             </div>
             <div class="input-group mt-3">
               <div class="input-group-text">REATED CURRENT HV</div>
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                formControlName="reatedCurrentHV"
+                formControlName="ratedCurrentHV"
                 [ngClass]="{
                   'is-invalid':
-                    !page2Form.get('reatedCurrentHV')?.valid &&
-                    page2Form.get('reatedCurrentHV')?.touched,
+                    !page2Form.get('ratedCurrentHV')?.valid &&
+                    page2Form.get('ratedCurrentHV')?.touched,
                   'is-valid':
-                    page2Form.get('reatedCurrentHV')?.valid &&
-                    page2Form.get('reatedCurrentHV')?.touched
+                    page2Form.get('ratedCurrentHV')?.valid &&
+                    page2Form.get('ratedCurrentHV')?.touched
                 }"
               />
+              <div class="input-group-text">AMPS</div>
               <span class="invalid-feedback"
-                >Please enter reated current HV</span
+                >Please enter rated current HV</span
               >
             </div>
             <div class="input-group mt-3">
               <div class="input-group-text">REATED CURRENT LV</div>
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                formControlName="reatedCurrentLV"
+                formControlName="ratedCurrentLV"
                 [ngClass]="{
                   'is-invalid':
-                    !page2Form.get('reatedCurrentLV')?.valid &&
-                    page2Form.get('reatedCurrentLV')?.touched,
+                    !page2Form.get('ratedCurrentLV')?.valid &&
+                    page2Form.get('ratedCurrentLV')?.touched,
                   'is-valid':
-                    page2Form.get('reatedCurrentLV')?.valid &&
-                    page2Form.get('reatedCurrentLV')?.touched
+                    page2Form.get('ratedCurrentLV')?.valid &&
+                    page2Form.get('ratedCurrentLV')?.touched
                 }"
               />
+              <div class="input-group-text">AMPS</div>
               <span class="invalid-feedback"
-                >Please enter reated current LV</span
+                >Please enter rated current LV</span
               >
             </div>
             <div class="input-group mt-3">
               <div class="input-group-text">REATED FREQUENCY</div>
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                formControlName="reatedFrequency"
+                formControlName="ratedFrequency"
                 [ngClass]="{
                   'is-invalid':
-                    !page2Form.get('reatedFrequency')?.valid &&
-                    page2Form.get('reatedFrequency')?.touched,
+                    !page2Form.get('ratedFrequency')?.valid &&
+                    page2Form.get('ratedFrequency')?.touched,
                   'is-valid':
-                    page2Form.get('reatedFrequency')?.valid &&
-                    page2Form.get('reatedFrequency')?.touched
+                    page2Form.get('ratedFrequency')?.valid &&
+                    page2Form.get('ratedFrequency')?.touched
                 }"
               />
-              <span class="invalid-feedback"
-                >Please enter reated frequency</span
-              >
+              <div class="input-group-text">Hz</div>
+              <span class="invalid-feedback">Please enter rated frequency</span>
             </div>
             <div class="input-group mt-3">
               <div class="input-group-text">VECTOER GROUP</div>
@@ -217,16 +221,83 @@
                 </div>
               </div>
             </div>
+
             <div class="text-center">
               <button
                 class="btn btn-primary mt-4"
+                data-bs-toggle="modal"
+                data-bs-target="#page2Modal"
                 [disabled]="!page2Form.valid"
               >
-                SAVE AND NEXT
+                Confirm and Next
               </button>
             </div>
           </form>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal -->
+<div class="modal fade" id="page2Modal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-center">
+        <div class="modal-title fs-5 text-light" id="exampleModalLabel">
+          TEST CERTIFICATE
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped table-hover mt-5">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Rated Capacity</th>
+              <th>Rated Voltage HV</th>
+              <th>Rated Voltage LV</th>
+              <th>Rated Current HV</th>
+              <th>Rated Current LV</th>
+              <th>Reated Frequency</th>
+              <th>Vector Group</th>
+              <th>Positive Taps</th>
+              <th>Negative Taps</th>
+              <th>Steps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of page2CreatedFormArr">
+              <td>{{ item.type }}</td>
+              <td>{{ item.ratedCapacity }}</td>
+              <td>{{ item.ratedVoltageHV }}</td>
+              <td>{{ item.ratedVoltageLV }}</td>
+              <td>{{ item.ratedCurrentHV }}</td>
+              <td>{{ item.ratedCurrentLV }}</td>
+              <td>{{ item.ratedFrequency }}</td>
+              <td>{{ item.vectorGroup }}</td>
+              <td>{{ item.positiveTaps }}</td>
+              <td>{{ item.negativeTaps }}</td>
+              <td>{{ item.steps }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          [routerLink]="['/page3']"
+        >
+          Save and Next
+        </button>
       </div>
     </div>
   </div>
