@@ -15,9 +15,10 @@ import { Page5Component } from './pages/page5/page5.component';
 import { TestsComponent } from './pages/tests/tests.component';
 import { Page6Component } from './pages/page6/page6.component';
 import { Page9Component } from './pages/page9/page9.component';
+import { ViewPdfComponent } from './pages/view-pdf/view-pdf.component';
 
 @NgModule({
-  declarations: [AppComponent, Page1Component, Page2Component, Page3Component, Page4Component, Page5Component, TestsComponent, Page6Component, Page9Component],
+  declarations: [AppComponent, Page1Component, Page2Component, Page3Component, Page4Component, Page5Component, TestsComponent, Page6Component, Page9Component, ViewPdfComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
