@@ -1,0 +1,91 @@
+<div class="text-center mt-4">
+  <h1>Magnetic Balance and Magnetic Current Test</h1>
+  <form>
+    <h1>From LV side</h1>
+    <div class="container">
+      <table
+        class="table table-striped table-bordered table-hover table-condensed"
+      >
+        <thead class="bg-primary">
+          <tr>
+            <th rowspan="2">Skip Phase</th>
+            <th colspan="4">LV</th>
+          </tr>
+          <tr>
+            <th>2U2N</th>
+            <th>2V2N</th>
+            <th>2W2N</th>
+            <th>I (A)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>U</td>
+            <td><input type="number" id="u2u" class="form-control" /></td>
+            <td><input type="number" id="u2v" class="form-control" /></td>
+            <td><input type="number" id="u2w" class="form-control" /></td>
+            <td><input type="number" id="u2i" class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>V</td>
+            <td><input type="number" id="v2u" class="form-control" /></td>
+            <td><input type="number" id="v2u" class="form-control" /></td>
+            <td><input type="number" id="v2u" class="form-control" /></td>
+            <td><input type="number" id="v2i" class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>W</td>
+            <td><input type="number" id="w2u" class="form-control" /></td>
+            <td><input type="number" id="w2u" class="form-control" /></td>
+            <td><input type="number" id="w2u" class="form-control" /></td>
+            <td><input type="number" id="w2i" class="form-control" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <h1>From HV side</h1>
+      <table
+        class="table table-striped table-bordered table-hover table-condensed"
+      >
+        <thead class="bg-primary">
+          <tr>
+            <th rowspan="2">Skip Phase</th>
+            <th colspan="4">HV</th>
+          </tr>
+          <tr>
+            <th>1U1V</th>
+            <th>1V1W</th>
+            <th>1W1U</th>
+            <th>I (mA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>U</td>
+            <td><input type="number" id="u1u" class="form-control" /></td>
+            <td><input type="number" id="u1v" class="form-control" /></td>
+            <td><input type="number" id="u1w" class="form-control" /></td>
+            <td><input type="number" id="u1i" class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>V</td>
+            <td><input type="number" id="v1u" class="form-control" /></td>
+            <td><input type="number" id="v1u" class="form-control" /></td>
+            <td><input type="number" id="v1u" class="form-control" /></td>
+            <td><input type="number" id="v1i" class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>W</td>
+            <td><input type="number" id="w1u" class="form-control" /></td>
+            <td><input type="number" id="w1u" class="form-control" /></td>
+            <td><input type="number" id="w1u" class="form-control" /></td>
+            <td><input type="number" id="w1i" class="form-control" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</div>

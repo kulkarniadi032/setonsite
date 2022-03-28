@@ -11,7 +11,9 @@ export class TestsComponent implements OnInit {
     console.log('this is test compo');
 
     console.log(this.page3.testDataFrompage3);
+    this.selectedTestCasesData = this.page3.testDataFrompage3;
   }
 
   ngOnInit(): void {}
+  selectedTestCasesData: any;
 }
