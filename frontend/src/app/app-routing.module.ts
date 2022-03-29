@@ -19,11 +19,11 @@ const routes: Routes = [
   { path: 'page5', component: Page5Component },
   { path: 'page6', component: Page6Component },
   { path: 'page7', component: Page7Component },
-  // { path: 'page8', component: Page6Component },
+  { path: 'page8', component: Page6Component },
   { path: 'page9', component: Page9Component },
-  // { path: 'page10', component: Page6Component },
-  // { path: 'page11', component: Page6Component },
-  // { path: 'page12', component: Page6Component },
+  { path: 'page10', component: Page6Component },
+  { path: 'page11', component: Page6Component },
+  { path: 'page12', component: Page6Component },
   { path: 'tests', component: TestsComponent },
 ];
 
