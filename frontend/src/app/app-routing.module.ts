@@ -1,3 +1,7 @@
+import { Page12Component } from './pages/page12/page12.component';
+import { Page11Component } from './pages/page11/page11.component';
+import { Page10Component } from './pages/page10/page10.component';
+import { Page8Component } from './pages/page8/page8.component';
 import { Page6Component } from './pages/page6/page6.component';
 import { Page3Component } from './pages/page3/page3.component';
 import { NgModule } from '@angular/core';
@@ -15,15 +19,27 @@ const routes: Routes = [
   { path: '', component: Page1Component },
   { path: 'page2', component: Page2Component },
   { path: 'page3', component: Page3Component },
-  { path: 'page4', component: Page4Component },
-  { path: 'page5', component: Page5Component },
-  { path: 'page6', component: Page6Component },
-  { path: 'page7', component: Page7Component },
-  { path: 'page8', component: Page6Component },
-  { path: 'page9', component: Page9Component },
-  { path: 'page10', component: Page6Component },
-  { path: 'page11', component: Page6Component },
-  { path: 'page12', component: Page6Component },
+  { path: 'MEASUREMENT OF INSULATION RESISTANCE', component: Page4Component },
+  { path: 'MEASUREMENT OF VOLTAGE RATIO', component: Page5Component },
+  {
+    path: 'MAGNETIC BALANCE AND MAGNETISING CURRENT TEST',
+    component: Page6Component,
+  },
+  { path: 'MEASUREMENT OF WINDING RESISTANCE', component: Page7Component },
+  { path: 'VECTOR GROUP TEST', component: Page8Component },
+  {
+    path: 'MEASUREMENT OF NO LOAD LOSS AND NO LOAD CURRENT',
+    component: Page9Component,
+  },
+  {
+    path: 'MEASUREMENT OF LOAD LOSS AND IMPEDANCE',
+    component: Page10Component,
+  },
+  {
+    path: 'SEPARATE SOURCE VOLTAGE WITHSTAND TEST',
+    component: Page11Component,
+  },
+  { path: 'INDUCED OVER VOLTAGE TEST', component: Page12Component },
   { path: 'tests', component: TestsComponent },
 ];
 
