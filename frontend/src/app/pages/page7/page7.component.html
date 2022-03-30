@@ -1,200 +1,204 @@
 <div class="text-center mt-4">
-    <h1>Measurement Winding Resistance</h1>
-    <form>
-        <h2>Primary Winding</h2>
-        <div class="container">
-            <table class="table table-striped table-bordered table-hover table-condensed">
-                <thead class="bg-primary">
-                    <tr>
-                        <th>Tap No.</th>
-                        <th>1U1V</th>
-                        <th>1V1W</th>
-                        <th>1U1W</th>
-                        <th>Ravg</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><input type="number" class="form-control" id="uv1" /></td>
-                        <td><input type="number" class="form-control" id="vw1" /></td>
-                        <td><input type="number" class="form-control" id="uw1" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r1" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td><input type="number" class="form-control" id="uv2" /></td>
-                        <td><input type="number" class="form-control" id="vw2" /></td>
-                        <td><input type="number" class="form-control" id="uw2" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r2" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td><input type="number" class="form-control" id="uv3" /></td>
-                        <td><input type="number" class="form-control" id="vw3" /></td>
-                        <td><input type="number" class="form-control" id="uw3" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r3" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td><input type="number" class="form-control" id="uv4" /></td>
-                        <td><input type="number" class="form-control" id="vw4" /></td>
-                        <td><input type="number" class="form-control" id="uw4" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r4" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td><input type="number" class="form-control" id="uv5" /></td>
-                        <td><input type="number" class="form-control" id="vw5" /></td>
-                        <td><input type="number" class="form-control" id="uw5" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r5" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td><input type="number" class="form-control" id="uv6" /></td>
-                        <td><input type="number" class="form-control" id="vw6" /></td>
-                        <td><input type="number" class="form-control" id="uw6" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r6" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td><input type="number" class="form-control" id="uv7" /></td>
-                        <td><input type="number" class="form-control" id="vw7" /></td>
-                        <td><input type="number" class="form-control" id="uw7" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r7" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td><input type="number" class="form-control" id="uv8" /></td>
-                        <td><input type="number" class="form-control" id="vw8" /></td>
-                        <td><input type="number" class="form-control" id="uw8" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r8" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>9 (N)</td>
-                        <td><input type="number" class="form-control" id="uv9" /></td>
-                        <td><input type="number" class="form-control" id="vw9" /></td>
-                        <td><input type="number" class="form-control" id="uw9" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r9" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td><input type="number" class="form-control" id="uv10" /></td>
-                        <td><input type="number" class="form-control" id="vw10" /></td>
-                        <td><input type="number" class="form-control" id="uw10" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r10" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>11</td>
-                        <td><input type="number" class="form-control" id="uv11" /></td>
-                        <td><input type="number" class="form-control" id="vw11" /></td>
-                        <td><input type="number" class="form-control" id="uw11" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r11" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>12</td>
-                        <td><input type="number" class="form-control" id="uv12" /></td>
-                        <td><input type="number" class="form-control" id="vw12" /></td>
-                        <td><input type="number" class="form-control" id="uw12" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r12" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>13</td>
-                        <td><input type="number" class="form-control" id="uv13" /></td>
-                        <td><input type="number" class="form-control" id="vw13" /></td>
-                        <td><input type="number" class="form-control" id="uw13" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r13" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>14</td>
-                        <td><input type="number" class="form-control" id="uv14" /></td>
-                        <td><input type="number" class="form-control" id="vw14" /></td>
-                        <td><input type="number" class="form-control" id="uw14" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r14" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>15</td>
-                        <td><input type="number" class="form-control" id="uv15" /></td>
-                        <td><input type="number" class="form-control" id="vw15" /></td>
-                        <td><input type="number" class="form-control" id="uw15" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r15" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>16</td>
-                        <td><input type="number" class="form-control" id="uv16" /></td>
-                        <td><input type="number" class="form-control" id="vw16" /></td>
-                        <td><input type="number" class="form-control" id="uw16" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r16" readonly />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>17</td>
-                        <td><input type="number" class="form-control" id="uv17" /></td>
-                        <td><input type="number" class="form-control" id="vw17" /></td>
-                        <td><input type="number" class="form-control" id="uw17" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="p7r17" readonly />
-                        </td>
-                      </tr>
-                  </tbody>
-            </table>
-        </div>
-        <div class="container">
-            <h2>Seccondary Winding</h2>
-            <table class="table table-striped table-bordered table-hover table-condensed">
-                <thead>
-                    <tr>
-                        <th>2U2N</th>
-                        <th>2V2N</th>
-                        <th>2W2N</th>
-                        <th>Ravg</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="number" class="form-control" id="un" /></td>
-                        <td><input type="number" class="form-control" id="vn" /></td>
-                        <td><input type="number" class="form-control" id="wn" /></td>
-                        <td>
-                          <input type="number" class="form-control" id="2r17" readonly />
-                        </td>
-                      </tr>
-                </tbody>
-            </table>
-        </div>
-        <button type="submit" class="btn btn-primary mb-5 mt-2">
-            SAVE AND NEXT
-          </button>
-    </form>
+  <h1>Measurement Winding Resistance</h1>
+  <form>
+    <h2>Primary Winding</h2>
+    <div class="container">
+      <table
+        class="table table-striped table-bordered table-hover table-condensed"
+      >
+        <thead class="bg-primary">
+          <tr>
+            <th>Tap No.</th>
+            <th>1U1V</th>
+            <th>1V1W</th>
+            <th>1U1W</th>
+            <th>Ravg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><input type="number" class="form-control" id="uv1" /></td>
+            <td><input type="number" class="form-control" id="vw1" /></td>
+            <td><input type="number" class="form-control" id="uw1" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r1" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><input type="number" class="form-control" id="uv2" /></td>
+            <td><input type="number" class="form-control" id="vw2" /></td>
+            <td><input type="number" class="form-control" id="uw2" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r2" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><input type="number" class="form-control" id="uv3" /></td>
+            <td><input type="number" class="form-control" id="vw3" /></td>
+            <td><input type="number" class="form-control" id="uw3" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r3" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><input type="number" class="form-control" id="uv4" /></td>
+            <td><input type="number" class="form-control" id="vw4" /></td>
+            <td><input type="number" class="form-control" id="uw4" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r4" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><input type="number" class="form-control" id="uv5" /></td>
+            <td><input type="number" class="form-control" id="vw5" /></td>
+            <td><input type="number" class="form-control" id="uw5" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r5" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><input type="number" class="form-control" id="uv6" /></td>
+            <td><input type="number" class="form-control" id="vw6" /></td>
+            <td><input type="number" class="form-control" id="uw6" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r6" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><input type="number" class="form-control" id="uv7" /></td>
+            <td><input type="number" class="form-control" id="vw7" /></td>
+            <td><input type="number" class="form-control" id="uw7" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r7" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><input type="number" class="form-control" id="uv8" /></td>
+            <td><input type="number" class="form-control" id="vw8" /></td>
+            <td><input type="number" class="form-control" id="uw8" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r8" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>9 (N)</td>
+            <td><input type="number" class="form-control" id="uv9" /></td>
+            <td><input type="number" class="form-control" id="vw9" /></td>
+            <td><input type="number" class="form-control" id="uw9" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r9" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><input type="number" class="form-control" id="uv10" /></td>
+            <td><input type="number" class="form-control" id="vw10" /></td>
+            <td><input type="number" class="form-control" id="uw10" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r10" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td><input type="number" class="form-control" id="uv11" /></td>
+            <td><input type="number" class="form-control" id="vw11" /></td>
+            <td><input type="number" class="form-control" id="uw11" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r11" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><input type="number" class="form-control" id="uv12" /></td>
+            <td><input type="number" class="form-control" id="vw12" /></td>
+            <td><input type="number" class="form-control" id="uw12" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r12" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><input type="number" class="form-control" id="uv13" /></td>
+            <td><input type="number" class="form-control" id="vw13" /></td>
+            <td><input type="number" class="form-control" id="uw13" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r13" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td><input type="number" class="form-control" id="uv14" /></td>
+            <td><input type="number" class="form-control" id="vw14" /></td>
+            <td><input type="number" class="form-control" id="uw14" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r14" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td><input type="number" class="form-control" id="uv15" /></td>
+            <td><input type="number" class="form-control" id="vw15" /></td>
+            <td><input type="number" class="form-control" id="uw15" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r15" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td><input type="number" class="form-control" id="uv16" /></td>
+            <td><input type="number" class="form-control" id="vw16" /></td>
+            <td><input type="number" class="form-control" id="uw16" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r16" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td><input type="number" class="form-control" id="uv17" /></td>
+            <td><input type="number" class="form-control" id="vw17" /></td>
+            <td><input type="number" class="form-control" id="uw17" /></td>
+            <td>
+              <input type="number" class="form-control" id="p7r17" readonly />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <h2>Seccondary Winding</h2>
+      <table
+        class="table table-striped table-bordered table-hover table-condensed"
+      >
+        <thead>
+          <tr>
+            <th>2U2N</th>
+            <th>2V2N</th>
+            <th>2W2N</th>
+            <th>Ravg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="number" class="form-control" id="un" /></td>
+            <td><input type="number" class="form-control" id="vn" /></td>
+            <td><input type="number" class="form-control" id="wn" /></td>
+            <td>
+              <input type="number" class="form-control" id="2r17" readonly />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="submit" class="btn btn-primary mb-5 mt-2">
+      Save and Next
+    </button>
+  </form>
 </div>
