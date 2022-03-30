@@ -26,30 +26,74 @@ export class Page4Component implements OnInit {
   }
   HVE15: any;
   HVE60: any;
+  HVE600: any;
+  LVE15: any;
+  LVE60: any;
+  LVE600: any;
+  HVLV15: any;
+  HVLV60: any;
+  HVLV600: any;
   handleHVE15(data: any) {
-    console.log(data);
     this.HVE15 = data;
-    this.PI15();
+    this.DIHV();
   }
   handleLVE15(data: any) {
-    console.log(data);
+    this.LVE15 = data;
+    this.DILV();
   }
   handleHVLVE15(data: any) {
-    console.log(data);
+    this.HVLV15 = data;
+    this.DIHVLV();
   }
   handleHVE60(data: any) {
-    console.log(data);
     this.HVE60 = data;
-    this.PI15();
+    this.DIHV();
+    this.PIHV();
   }
   handleLVE60(data: any) {
-    console.log(data);
+    this.LVE60 = data;
+    this.DILV();
+    this.PILV();
   }
   handleHVLV60(data: any) {
-    console.log(data);
+    this.HVLV60 = data;
+    this.DIHVLV();
+    this.PIHVLV();
   }
-  PI15Data: any;
-  PI15() {
-    this.PI15Data = this.HVE15 / this.HVE60;
+  handleHVE600(data: any) {
+    this.HVE600 = data;
+    this.PIHV();
+  }
+  handleLVE600(data: any) {
+    this.LVE600 = data;
+    this.PILV();
+  }
+  handleHVLV600(data: any) {
+    this.HVLV600 = data;
+    this.PIHVLV();
+  }
+  PIHVData: any;
+  PILVData: any;
+  PIHVLVData: any;
+  DIHVData: any;
+  DILVData: any;
+  DIHVLVData: any;
+  PIHV() {
+    this.PIHVData = this.HVE600 / this.HVE60;
+  }
+  PILV() {
+    this.PILVData = this.LVE600 / this.LVE60;
+  }
+  PIHVLV() {
+    this.PIHVLVData = this.HVLV600 / this.HVLV60;
+  }
+  DIHV() {
+    this.DIHVData = this.HVE60 / this.HVE15;
+  }
+  DILV() {
+    this.DILVData = this.LVE60 / this.LVE15;
+  }
+  DIHVLV() {
+    this.DIHVLVData = this.HVLV60 / this.HVLV15;
   }
 }

@@ -155,6 +155,7 @@
                   'is-invalid':
                     !form4.get('HVE600')?.valid && form4.get('HVE600')?.touched
                 }"
+                (ngModelChange)="handleHVE600($event)"
               />
               <span class="invalid-feedback"
                 >Please enter value of HV-E for 600 sec</span
@@ -172,6 +173,7 @@
                   'is-invalid':
                     !form4.get('LVE600')?.valid && form4.get('LVE600')?.touched
                 }"
+                (ngModelChange)="handleLVE600($event)"
               />
               <span class="invalid-feedback"
                 >Please enter value of LV-E for 600 sec</span
@@ -191,6 +193,7 @@
                     !form4.get('HVLV600')?.valid &&
                     form4.get('HVLV600')?.touched
                 }"
+                (ngModelChange)="handleHVLV600($event)"
               />
               <span class="invalid-feedback"
                 >Please enter value of HV-LV for 600 sec</span
@@ -204,26 +207,63 @@
                 type="number"
                 class="form-control"
                 readonly
-                value="{{ PI15Data }}"
+                value="{{ PIHVData }}"
               />
             </td>
 
-            <td><input type="number" class="form-control" readonly /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ PILVData }}"
+              />
+            </td>
 
-            <td><input type="number" class="form-control" readonly /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ PIHVLVData }}"
+              />
+            </td>
           </tr>
           <tr>
             <td colspan="2">DI</td>
-            <td><input type="number" class="form-control" readonly /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ DIHVData }}"
+              />
+            </td>
 
-            <td><input type="number" class="form-control" readonly /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ DILVData }}"
+              />
+            </td>
 
-            <td><input type="number" class="form-control" readonly /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ DIHVLVData }}"
+              />
+            </td>
           </tr>
         </tbody>
       </table>
     </form>
   </div>
 
-  <button type="button" class="btn btn-primary">Save and Next</button>
+  <div class="text-center">
+    <button type="button" class="btn btn-primary">Save and Next</button>
+  </div>
 </div>
