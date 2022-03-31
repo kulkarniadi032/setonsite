@@ -62,6 +62,7 @@ export class Page7Component implements OnInit {
     U1V1_17: new FormControl('', [Validators.required]),
     V1W1_17: new FormControl('', [Validators.required]),
     U1W1_17: new FormControl('', [Validators.required]),
+    
     U2V2: new FormControl('', [Validators.required]),
     V2W2: new FormControl('', [Validators.required]),
     U2W2: new FormControl('', [Validators.required]),
