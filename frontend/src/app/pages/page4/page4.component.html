@@ -208,6 +208,7 @@
                 class="form-control"
                 readonly
                 value="{{ PIHVData }}"
+                formControlName="PIHV"
               />
             </td>
 
@@ -217,6 +218,7 @@
                 class="form-control"
                 readonly
                 value="{{ PILVData }}"
+                formControlName="PILV"
               />
             </td>
 
@@ -226,6 +228,7 @@
                 class="form-control"
                 readonly
                 value="{{ PIHVLVData }}"
+                formControlName="PIHVLV"
               />
             </td>
           </tr>
@@ -237,6 +240,7 @@
                 class="form-control"
                 readonly
                 value="{{ DIHVData }}"
+                formControlName="DIHV"
               />
             </td>
 
@@ -246,6 +250,7 @@
                 class="form-control"
                 readonly
                 value="{{ DILVData }}"
+                formControlName="DILV"
               />
             </td>
 
@@ -255,15 +260,17 @@
                 class="form-control"
                 readonly
                 value="{{ DIHVLVData }}"
+                formControlName="DIHVLV"
               />
             </td>
           </tr>
         </tbody>
       </table>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary" type="submit">
+          Save and Next
+        </button>
+      </div>
     </form>
-  </div>
-
-  <div class="text-center">
-    <button type="button" class="btn btn-primary">Save and Next</button>
   </div>
 </div>

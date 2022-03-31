@@ -1,5 +1,6 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { FourthPageService } from 'src/app/services/fourth-page.service';
 
 @Component({
   selector: 'app-page4',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page4.component.css'],
 })
 export class Page4Component implements OnInit {
-  constructor() {}
+  constructor(private page4: FourthPageService) {}
 
   ngOnInit(): void {}
   form4 = new FormGroup({
@@ -20,9 +21,23 @@ export class Page4Component implements OnInit {
     HVE600: new FormControl('', [Validators.required]),
     LVE600: new FormControl('', [Validators.required]),
     HVLV600: new FormControl('', [Validators.required]),
+    PIHV: new FormControl('', [Validators.required]),
+    PILV: new FormControl('', [Validators.required]),
+    PIHVLV: new FormControl('', [Validators.required]),
+    DIHV: new FormControl('', [Validators.required]),
+    DILV: new FormControl('', [Validators.required]),
+    DIHVLV: new FormControl('', [Validators.required]),
   });
   createPage4Data(data: any) {
-    console.log(data);
+    this.page4.createPage4ServiceData({
+      ...data.value,
+      PIHV: this.PIHVData,
+      PILV: this.PILVData,
+      PIHVLV: this.PIHVLVData,
+      DIHV: this.DIHVData,
+      DILV: this.DILVData,
+      DIHVLV: this.DIHVLVData,
+    });
   }
   HVE15: any;
   HVE60: any;
