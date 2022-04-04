@@ -19,8 +19,9 @@
           <tr>
             <td>1</td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1V1_1"
                 [ngClass]="{
                   'is-valid':
@@ -29,14 +30,15 @@
                     !form7.get('U1V1_1')?.valid && form7.get('U1V1_1')?.touched
                 }"
                 (ngModelChange)="handleU1V1_1($event)"
-                />
-                <span class="invalid-feedback"
+              />
+              <span class="invalid-feedback"
                 >Please enter value of 1U1V for 15 sec</span
               >
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_1"
                 [ngClass]="{
                   'is-valid':
@@ -45,14 +47,16 @@
                     !form7.get('V1W1_1')?.valid && form7.get('V1W1_1')?.touched
                 }"
                 (ngModelChange)="handleV1W1_1($event)"
-                />
-                <span class="invalid-feedback"
+              />
+              <span class="invalid-feedback"
                 >Please enter value of 1V1W for 15 sec</span
               >
             </td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1W1_1"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1W1_1"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1W1_1')?.valid && form7.get('U1W1_1')?.touched,
@@ -60,27 +64,30 @@
                     !form7.get('U1W1_1')?.valid && form7.get('U1W1_1')?.touched
                 }"
                 (ngModelChange)="handleU1W1_1($event)"
-                />
-                <span class="invalid-feedback"
+              />
+              <span class="invalid-feedback"
                 >Please enter value of 1U1W for 15 sec</span
-              > 
+              >
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control"  
+              <input
+                type="number"
+                class="form-control"
                 readonly
-                value="{{ Ravg1Data }}" />
+                value="{{ Ravg1Data }}"
+              />
             </td>
           </tr>
 
           <!--  -->
-          
+
           <tr>
             <td>2</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_2"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_2"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_2')?.valid && form7.get('U1V1_2')?.touched,
@@ -88,14 +95,15 @@
                     !form7.get('U1V1_2')?.valid && form7.get('U1V1_2')?.touched
                 }"
                 (ngModelChange)="handleU1V1_2($event)"
-                />
-                <span class="invalid-feedback"
+              />
+              <span class="invalid-feedback"
                 >Please enter value of 1U1V for 15 sec</span
               >
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_2"
                 [ngClass]="{
                   'is-valid':
@@ -104,14 +112,15 @@
                     !form7.get('V1W1_2')?.valid && form7.get('V1W1_2')?.touched
                 }"
                 (ngModelChange)="handleV1W1_2($event)"
-                />
-                <span class="invalid-feedback"
+              />
+              <span class="invalid-feedback"
                 >Please enter value of 1V1W for 15 sec</span
               >
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_2"
                 [ngClass]="{
                   'is-valid':
@@ -120,17 +129,18 @@
                     !form7.get('U1W1_2')?.valid && form7.get('U1W1_2')?.touched
                 }"
                 (ngModelChange)="handleU1W1_2($event)"
-                />
-                <span class="invalid-feedback"
+              />
+              <span class="invalid-feedback"
                 >Please enter value of 1U1W for 15 sec</span
               >
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg2Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg2Data }}"
+              />
             </td>
           </tr>
 
@@ -138,9 +148,11 @@
 
           <tr>
             <td>3</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_3"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_3"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_3')?.valid && form7.get('U1V1_3')?.touched,
@@ -148,14 +160,13 @@
                     !form7.get('U1V1_3')?.valid && form7.get('U1V1_3')?.touched
                 }"
                 (ngModelChange)="handleU1V1_3($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_3"
                 [ngClass]="{
                   'is-valid':
@@ -164,14 +175,13 @@
                     !form7.get('V1W1_3')?.valid && form7.get('V1W1_3')?.touched
                 }"
                 (ngModelChange)="handleV1W1_3($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_3"
                 [ngClass]="{
                   'is-valid':
@@ -180,17 +190,16 @@
                     !form7.get('U1W1_3')?.valid && form7.get('U1W1_3')?.touched
                 }"
                 (ngModelChange)="handleU1W1_3($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg3Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg3Data }}"
+              />
             </td>
           </tr>
 
@@ -198,9 +207,11 @@
 
           <tr>
             <td>4</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_4"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_4"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_4')?.valid && form7.get('U1V1_4')?.touched,
@@ -208,14 +219,13 @@
                     !form7.get('U1V1_4')?.valid && form7.get('U1V1_4')?.touched
                 }"
                 (ngModelChange)="handleU1V1_4($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_4"
                 [ngClass]="{
                   'is-valid':
@@ -224,14 +234,13 @@
                     !form7.get('V1W1_4')?.valid && form7.get('V1W1_4')?.touched
                 }"
                 (ngModelChange)="handleV1W1_4($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_4"
                 [ngClass]="{
                   'is-valid':
@@ -240,17 +249,16 @@
                     !form7.get('U1W1_4')?.valid && form7.get('U1W1_4')?.touched
                 }"
                 (ngModelChange)="handleU1W1_4($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg4Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg4Data }}"
+              />
             </td>
           </tr>
 
@@ -258,9 +266,11 @@
 
           <tr>
             <td>5</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_5"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_5"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_5')?.valid && form7.get('U1V1_5')?.touched,
@@ -268,14 +278,13 @@
                     !form7.get('U1V1_5')?.valid && form7.get('U1V1_5')?.touched
                 }"
                 (ngModelChange)="handleU1V1_5($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_5"
                 [ngClass]="{
                   'is-valid':
@@ -284,14 +293,13 @@
                     !form7.get('V1W1_5')?.valid && form7.get('V1W1_5')?.touched
                 }"
                 (ngModelChange)="handleV1W1_5($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_5"
                 [ngClass]="{
                   'is-valid':
@@ -300,17 +308,16 @@
                     !form7.get('U1W1_5')?.valid && form7.get('U1W1_5')?.touched
                 }"
                 (ngModelChange)="handleU1W1_5($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg5Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg5Data }}"
+              />
             </td>
           </tr>
 
@@ -318,9 +325,11 @@
 
           <tr>
             <td>6</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_6"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_6"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_6')?.valid && form7.get('U1V1_6')?.touched,
@@ -328,14 +337,13 @@
                     !form7.get('U1V1_6')?.valid && form7.get('U1V1_6')?.touched
                 }"
                 (ngModelChange)="handleU1V1_6($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_6"
                 [ngClass]="{
                   'is-valid':
@@ -344,14 +352,13 @@
                     !form7.get('V1W1_6')?.valid && form7.get('V1W1_6')?.touched
                 }"
                 (ngModelChange)="handleV1W1_6($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_6"
                 [ngClass]="{
                   'is-valid':
@@ -360,17 +367,16 @@
                     !form7.get('U1W1_6')?.valid && form7.get('U1W1_6')?.touched
                 }"
                 (ngModelChange)="handleU1W1_6($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg6Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg6Data }}"
+              />
             </td>
           </tr>
 
@@ -378,9 +384,11 @@
 
           <tr>
             <td>7</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_7"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_7"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_7')?.valid && form7.get('U1V1_7')?.touched,
@@ -388,14 +396,13 @@
                     !form7.get('U1V1_7')?.valid && form7.get('U1V1_7')?.touched
                 }"
                 (ngModelChange)="handleU1V1_7($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_7"
                 [ngClass]="{
                   'is-valid':
@@ -404,14 +411,13 @@
                     !form7.get('V1W1_7')?.valid && form7.get('V1W1_7')?.touched
                 }"
                 (ngModelChange)="handleV1W1_7($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_7"
                 [ngClass]="{
                   'is-valid':
@@ -420,17 +426,16 @@
                     !form7.get('U1W1_7')?.valid && form7.get('U1W1_7')?.touched
                 }"
                 (ngModelChange)="handleU1W1_7($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg7Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg7Data }}"
+              />
             </td>
           </tr>
 
@@ -438,9 +443,11 @@
 
           <tr>
             <td>8</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_8"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_8"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_8')?.valid && form7.get('U1V1_8')?.touched,
@@ -448,14 +455,13 @@
                     !form7.get('U1V1_8')?.valid && form7.get('U1V1_8')?.touched
                 }"
                 (ngModelChange)="handleU1V1_8($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_8"
                 [ngClass]="{
                   'is-valid':
@@ -464,14 +470,13 @@
                     !form7.get('V1W1_8')?.valid && form7.get('V1W1_8')?.touched
                 }"
                 (ngModelChange)="handleV1W1_8($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_8"
                 [ngClass]="{
                   'is-valid':
@@ -480,17 +485,16 @@
                     !form7.get('U1W1_8')?.valid && form7.get('U1W1_8')?.touched
                 }"
                 (ngModelChange)="handleU1W1_8($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg8Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg8Data }}"
+              />
             </td>
           </tr>
 
@@ -498,9 +502,11 @@
 
           <tr>
             <td>9</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_9"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_9"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U1V1_9')?.valid && form7.get('U1V1_9')?.touched,
@@ -508,14 +514,13 @@
                     !form7.get('U1V1_9')?.valid && form7.get('U1V1_9')?.touched
                 }"
                 (ngModelChange)="handleU1V1_9($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_9"
                 [ngClass]="{
                   'is-valid':
@@ -524,14 +529,13 @@
                     !form7.get('V1W1_9')?.valid && form7.get('V1W1_9')?.touched
                 }"
                 (ngModelChange)="handleV1W1_9($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_9"
                 [ngClass]="{
                   'is-valid':
@@ -540,17 +544,16 @@
                     !form7.get('U1W1_9')?.valid && form7.get('U1W1_9')?.touched
                 }"
                 (ngModelChange)="handleU1W1_9($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg9Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg9Data }}"
+              />
             </td>
           </tr>
 
@@ -558,59 +561,64 @@
 
           <tr>
             <td>10</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_10"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_10"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_10')?.valid && form7.get('U1V1_10')?.touched,
+                    form7.get('U1V1_10')?.valid &&
+                    form7.get('U1V1_10')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_10')?.valid && form7.get('U1V1_10')?.touched
+                    !form7.get('U1V1_10')?.valid &&
+                    form7.get('U1V1_10')?.touched
                 }"
                 (ngModelChange)="handleU1V1_10($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_10"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_10')?.valid && form7.get('V1W1_10')?.touched,
+                    form7.get('V1W1_10')?.valid &&
+                    form7.get('V1W1_10')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_10')?.valid && form7.get('V1W1_10')?.touched
+                    !form7.get('V1W1_10')?.valid &&
+                    form7.get('V1W1_10')?.touched
                 }"
                 (ngModelChange)="handleV1W1_10($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_10"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_10')?.valid && form7.get('U1W1_10')?.touched,
+                    form7.get('U1W1_10')?.valid &&
+                    form7.get('U1W1_10')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_10')?.valid && form7.get('U1W1_10')?.touched
+                    !form7.get('U1W1_10')?.valid &&
+                    form7.get('U1W1_10')?.touched
                 }"
                 (ngModelChange)="handleU1W1_10($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg10Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg10Data }}"
+              />
             </td>
           </tr>
 
@@ -618,59 +626,64 @@
 
           <tr>
             <td>11</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_11"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_11"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_11')?.valid && form7.get('U1V1_11')?.touched,
+                    form7.get('U1V1_11')?.valid &&
+                    form7.get('U1V1_11')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_11')?.valid && form7.get('U1V1_11')?.touched
+                    !form7.get('U1V1_11')?.valid &&
+                    form7.get('U1V1_11')?.touched
                 }"
                 (ngModelChange)="handleU1V1_11($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_11"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_11')?.valid && form7.get('V1W1_11')?.touched,
+                    form7.get('V1W1_11')?.valid &&
+                    form7.get('V1W1_11')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_11')?.valid && form7.get('V1W1_11')?.touched
+                    !form7.get('V1W1_11')?.valid &&
+                    form7.get('V1W1_11')?.touched
                 }"
                 (ngModelChange)="handleV1W1_11($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_11"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_11')?.valid && form7.get('U1W1_11')?.touched,
+                    form7.get('U1W1_11')?.valid &&
+                    form7.get('U1W1_11')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_11')?.valid && form7.get('U1W1_11')?.touched
+                    !form7.get('U1W1_11')?.valid &&
+                    form7.get('U1W1_11')?.touched
                 }"
                 (ngModelChange)="handleU1W1_11($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg11Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg11Data }}"
+              />
             </td>
           </tr>
 
@@ -678,59 +691,64 @@
 
           <tr>
             <td>12</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_12"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_12"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_12')?.valid && form7.get('U1V1_12')?.touched,
+                    form7.get('U1V1_12')?.valid &&
+                    form7.get('U1V1_12')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_12')?.valid && form7.get('U1V1_12')?.touched
+                    !form7.get('U1V1_12')?.valid &&
+                    form7.get('U1V1_12')?.touched
                 }"
                 (ngModelChange)="handleU1V1_12($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_12"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_12')?.valid && form7.get('V1W1_12')?.touched,
+                    form7.get('V1W1_12')?.valid &&
+                    form7.get('V1W1_12')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_12')?.valid && form7.get('V1W1_12')?.touched
+                    !form7.get('V1W1_12')?.valid &&
+                    form7.get('V1W1_12')?.touched
                 }"
                 (ngModelChange)="handleV1W1_12($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_12"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_12')?.valid && form7.get('U1W1_12')?.touched,
+                    form7.get('U1W1_12')?.valid &&
+                    form7.get('U1W1_12')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_12')?.valid && form7.get('U1W1_12')?.touched
+                    !form7.get('U1W1_12')?.valid &&
+                    form7.get('U1W1_12')?.touched
                 }"
                 (ngModelChange)="handleU1W1_12($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg12Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg12Data }}"
+              />
             </td>
           </tr>
 
@@ -738,59 +756,64 @@
 
           <tr>
             <td>13</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_13"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_13"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_13')?.valid && form7.get('U1V1_13')?.touched,
+                    form7.get('U1V1_13')?.valid &&
+                    form7.get('U1V1_13')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_13')?.valid && form7.get('U1V1_13')?.touched
+                    !form7.get('U1V1_13')?.valid &&
+                    form7.get('U1V1_13')?.touched
                 }"
                 (ngModelChange)="handleU1V1_13($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_13"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_13')?.valid && form7.get('V1W1_13')?.touched,
+                    form7.get('V1W1_13')?.valid &&
+                    form7.get('V1W1_13')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_13')?.valid && form7.get('V1W1_13')?.touched
+                    !form7.get('V1W1_13')?.valid &&
+                    form7.get('V1W1_13')?.touched
                 }"
                 (ngModelChange)="handleV1W1_13($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_13"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_13')?.valid && form7.get('U1W1_13')?.touched,
+                    form7.get('U1W1_13')?.valid &&
+                    form7.get('U1W1_13')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_13')?.valid && form7.get('U1W1_13')?.touched
+                    !form7.get('U1W1_13')?.valid &&
+                    form7.get('U1W1_13')?.touched
                 }"
                 (ngModelChange)="handleU1W1_13($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg13Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg13Data }}"
+              />
             </td>
           </tr>
 
@@ -798,59 +821,64 @@
 
           <tr>
             <td>14</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_14"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_14"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_14')?.valid && form7.get('U1V1_14')?.touched,
+                    form7.get('U1V1_14')?.valid &&
+                    form7.get('U1V1_14')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_14')?.valid && form7.get('U1V1_14')?.touched
+                    !form7.get('U1V1_14')?.valid &&
+                    form7.get('U1V1_14')?.touched
                 }"
                 (ngModelChange)="handleU1V1_14($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_14"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_14')?.valid && form7.get('V1W1_14')?.touched,
+                    form7.get('V1W1_14')?.valid &&
+                    form7.get('V1W1_14')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_14')?.valid && form7.get('V1W1_14')?.touched
+                    !form7.get('V1W1_14')?.valid &&
+                    form7.get('V1W1_14')?.touched
                 }"
                 (ngModelChange)="handleV1W1_14($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_14"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_14')?.valid && form7.get('U1W1_14')?.touched,
+                    form7.get('U1W1_14')?.valid &&
+                    form7.get('U1W1_14')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_14')?.valid && form7.get('U1W1_14')?.touched
+                    !form7.get('U1W1_14')?.valid &&
+                    form7.get('U1W1_14')?.touched
                 }"
                 (ngModelChange)="handleU1W1_14($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg14Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg14Data }}"
+              />
             </td>
           </tr>
 
@@ -858,59 +886,64 @@
 
           <tr>
             <td>15</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_15"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_15"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_15')?.valid && form7.get('U1V1_15')?.touched,
+                    form7.get('U1V1_15')?.valid &&
+                    form7.get('U1V1_15')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_15')?.valid && form7.get('U1V1_15')?.touched
+                    !form7.get('U1V1_15')?.valid &&
+                    form7.get('U1V1_15')?.touched
                 }"
                 (ngModelChange)="handleU1V1_15($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_15"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_15')?.valid && form7.get('V1W1_15')?.touched,
+                    form7.get('V1W1_15')?.valid &&
+                    form7.get('V1W1_15')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_15')?.valid && form7.get('V1W1_15')?.touched
+                    !form7.get('V1W1_15')?.valid &&
+                    form7.get('V1W1_15')?.touched
                 }"
                 (ngModelChange)="handleV1W1_15($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_15"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_15')?.valid && form7.get('U1W1_15')?.touched,
+                    form7.get('U1W1_15')?.valid &&
+                    form7.get('U1W1_15')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_15')?.valid && form7.get('U1W1_15')?.touched
+                    !form7.get('U1W1_15')?.valid &&
+                    form7.get('U1W1_15')?.touched
                 }"
                 (ngModelChange)="handleU1W1_15($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg15Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg15Data }}"
+              />
             </td>
           </tr>
 
@@ -918,59 +951,64 @@
 
           <tr>
             <td>16</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_16"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_16"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_16')?.valid && form7.get('U1V1_16')?.touched,
+                    form7.get('U1V1_16')?.valid &&
+                    form7.get('U1V1_16')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_16')?.valid && form7.get('U1V1_16')?.touched
+                    !form7.get('U1V1_16')?.valid &&
+                    form7.get('U1V1_16')?.touched
                 }"
                 (ngModelChange)="handleU1V1_16($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_16"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_16')?.valid && form7.get('V1W1_16')?.touched,
+                    form7.get('V1W1_16')?.valid &&
+                    form7.get('V1W1_16')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_16')?.valid && form7.get('V1W1_16')?.touched
+                    !form7.get('V1W1_16')?.valid &&
+                    form7.get('V1W1_16')?.touched
                 }"
                 (ngModelChange)="handleV1W1_16($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_16"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_16')?.valid && form7.get('U1W1_16')?.touched,
+                    form7.get('U1W1_16')?.valid &&
+                    form7.get('U1W1_16')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_16')?.valid && form7.get('U1W1_16')?.touched
+                    !form7.get('U1W1_16')?.valid &&
+                    form7.get('U1W1_16')?.touched
                 }"
                 (ngModelChange)="handleU1W1_16($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg16Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg16Data }}"
+              />
             </td>
           </tr>
 
@@ -978,59 +1016,64 @@
 
           <tr>
             <td>17</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U1V1_17"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U1V1_17"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1V1_17')?.valid && form7.get('U1V1_17')?.touched,
+                    form7.get('U1V1_17')?.valid &&
+                    form7.get('U1V1_17')?.touched,
                   'is-invalid':
-                    !form7.get('U1V1_17')?.valid && form7.get('U1V1_17')?.touched
+                    !form7.get('U1V1_17')?.valid &&
+                    form7.get('U1V1_17')?.touched
                 }"
                 (ngModelChange)="handleU1V1_17($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1V</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1V</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V1W1_17"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('V1W1_17')?.valid && form7.get('V1W1_17')?.touched,
+                    form7.get('V1W1_17')?.valid &&
+                    form7.get('V1W1_17')?.touched,
                   'is-invalid':
-                    !form7.get('V1W1_17')?.valid && form7.get('V1W1_17')?.touched
+                    !form7.get('V1W1_17')?.valid &&
+                    form7.get('V1W1_17')?.touched
                 }"
                 (ngModelChange)="handleV1W1_17($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1V1W </span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1V1W </span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U1W1_17"
                 [ngClass]="{
                   'is-valid':
-                    form7.get('U1W1_17')?.valid && form7.get('U1W1_17')?.touched,
+                    form7.get('U1W1_17')?.valid &&
+                    form7.get('U1W1_17')?.touched,
                   'is-invalid':
-                    !form7.get('U1W1_17')?.valid && form7.get('U1W1_17')?.touched
+                    !form7.get('U1W1_17')?.valid &&
+                    form7.get('U1W1_17')?.touched
                 }"
                 (ngModelChange)="handleU1W1_17($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of 1U1W</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of 1U1W</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ Ravg17Data }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ Ravg17Data }}"
+              />
             </td>
           </tr>
         </tbody>
@@ -1050,11 +1093,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr><tr>
+          <tr></tr>
+          <tr>
             <td>17</td>
-            <td><input 
-              type="number" class="form-control"
-              formControlName="U2V2"
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="U2V2"
                 [ngClass]="{
                   'is-valid':
                     form7.get('U2V2')?.valid && form7.get('U2V2')?.touched,
@@ -1062,14 +1108,13 @@
                     !form7.get('U2V2')?.valid && form7.get('U2V2')?.touched
                 }"
                 (ngModelChange)="handleU2V2($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of U2V2</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of U2V2</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="V2W2"
                 [ngClass]="{
                   'is-valid':
@@ -1078,14 +1123,13 @@
                     !form7.get('V2W2')?.valid && form7.get('V2W2')?.touched
                 }"
                 (ngModelChange)="handleV2W2($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of V2W2</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of V2W2</span>
             </td>
             <td>
-              <input 
-                type="number" class="form-control"
+              <input
+                type="number"
+                class="form-control"
                 formControlName="U2W2"
                 [ngClass]="{
                   'is-valid':
@@ -1094,17 +1138,16 @@
                     !form7.get('U2W2')?.valid && form7.get('U2W2')?.touched
                 }"
                 (ngModelChange)="handleU2W2($event)"
-                />
-                <span class="invalid-feedback"
-                >Please enter value of U2W2</span
-              >
+              />
+              <span class="invalid-feedback">Please enter value of U2W2</span>
             </td>
             <td>
-              <input 
-                type="number" 
-                class="form-control" 
-                readonly 
-                value="{{ RavgSecData }}" />
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ RavgSecData }}"
+              />
             </td>
           </tr>
         </tbody>

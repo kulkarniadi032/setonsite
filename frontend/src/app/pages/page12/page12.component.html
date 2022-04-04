@@ -1,53 +1,70 @@
 <div class="text-center mt-4">
   <h1>INDUCED OVER VOLTAGE WITHSTAND TEST</h1>
-  <div class="container"></div>
   <div class="container">
-    <table
-      class="table mt-4 table-striped table-bordered table-hover table-condensed"
-    >
-      <thead class="bg-primary">
-        <tr>
-          <th>Rated Voltage</th>
-          <th>Test Voltage</th>
-          <th>Test Time</th>
-          <th>Frequency</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td aria-readonly="true">[Volts]</td>
-          <td aria-readonly="true">[Volts]</td>
-          <td aria-readonly="true">[Sec]</td>
-          <td aria-readonly="true">[Hz]</td>
-        </tr>
+    <form [formGroup]="form12" (ngSubmit)="createPage12FromData(form12)">
+      <table
+        class="table mt-4 table-striped table-bordered table-hover table-condensed"
+      >
+        <thead class="bg-primary">
+          <tr>
+            <th>Rated Voltage</th>
+            <th>Test Voltage</th>
+            <th>Test Time</th>
+            <th>Frequency</th>
+            <th *ngIf="isRemark">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td aria-readonly="true">[Volts]</td>
+            <td aria-readonly="true">[Volts]</td>
+            <td aria-readonly="true">[Sec]</td>
+            <td aria-readonly="true">[Hz]</td>
+            <td rowspan="2" *ngIf="isRemark" class="align-middle">
+              {{ isShowRemark }}
+            </td>
+          </tr>
 
-        <tr>
-          <td><input type="number" class="form-control" readonly /></td>
-          <td><input type="number" class="form-control" /></td>
+          <tr>
+            <td><input type="number" class="form-control" readonly /></td>
+            <td><input type="number" class="form-control" /></td>
 
-          <td><input type="number" class="form-control" /></td>
+            <td><input type="number" class="form-control" /></td>
 
-          <td><input type="number" class="form-control" /></td>
-        </tr>
-      </tbody>
-    </table>
+            <td><input type="number" class="form-control" /></td>
+          </tr>
+        </tbody>
+      </table>
 
-    <div class="card">
-      <div class="card-body">
-        <div class="input-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Please add remark here"
-          />
-          <a class="btn btn-primary mx-2">Add a Remark</a>
+      <div class="card">
+        <div class="card-body">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Please add remark here"
+              formControlName="remark"
+              (ngModelChange)="isAddremarkpage12($event)"
+            />
+            <button
+              class="btn btn-primary mx-2"
+              type="button"
+              (click)="addRemarkOfPage12()"
+            >
+              Add a Remark
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div>
-    <button class="btn btn-primary mt-4" [routerLink]="['/tests']">
-      Save and Next
-    </button>
+      <div>
+        <button
+          class="btn btn-primary mt-4"
+          [routerLink]="['/tests']"
+          type="submit"
+        >
+          Save and Next
+        </button>
+      </div>
+    </form>
   </div>
 </div>
