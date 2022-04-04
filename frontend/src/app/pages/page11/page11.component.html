@@ -1,6 +1,6 @@
 <div class="container">
-  <h1 class="m-4 text-center">Separate source</h1>
-  <form>
+  <h1 class="m-4 text-center">Separate source voltage withstand test</h1>
+  <form [formGroup]="form11" (ngSubmit)="createPage11FormData(form11)">
     <table
       class="table table-striped table-bordered table-hover table-condensed"
     >
@@ -19,28 +19,70 @@
         <tr>
           <td>HV</td>
           <td>
-            <input type="number" id="reatedVoltageHV" class="form-control" />
+            <input
+              type="number"
+              class="form-control"
+              value="{{ page2DataLoadInPage11.ratedVoltageHV }}"
+              formControlName="reatedVoltageHV"
+            />
           </td>
           <td>
-            <input type="number" id="TestVoltHV" class="form-control" />
+            <input
+              type="number"
+              id="testVoltHV"
+              class="form-control"
+              formControlName="testVoltHV"
+            />
           </td>
           <td>
-            <input type="number" id="TestTimeHV" class="form-control" />
+            <input
+              type="number"
+              id="testTimeHV"
+              class="form-control"
+              formControlName="testTimeHV"
+            />
           </td>
-          <td><input type="number" id="FreqHV" class="form-control" /></td>
+          <td>
+            <input
+              type="number"
+              id="freqHV"
+              class="form-control"
+              formControlName="freqHV"
+            />
+          </td>
         </tr>
         <tr>
           <td>LV</td>
           <td>
-            <input type="number" id="reatedVoltageLV" class="form-control" />
+            <input
+              type="number"
+              id="reatedVoltageLV"
+              class="form-control"
+              value="{{ page2DataLoadInPage11.ratedVoltageLV }}"
+              formControlName="reatedVoltageLV"
+            />
           </td>
           <td>
-            <input type="number" id="TestVoltLV" class="form-control" />
+            <input
+              type="number"
+              class="form-control"
+              formControlName="testVoltLV"
+            />
           </td>
           <td>
-            <input type="number" id="TestTimeLV" class="form-control" />
+            <input
+              type="number"
+              class="form-control"
+              formControlName="testTimeLV"
+            />
           </td>
-          <td><input type="number" id="FreqLV" class="form-control" /></td>
+          <td>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="freqLV"
+            />
+          </td>
         </tr>
       </tbody>
     </table>
