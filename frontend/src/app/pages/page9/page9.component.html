@@ -1,71 +1,90 @@
-<div class="text-center container">
-  <h1 class="m-5">Measurement of No Load Loss and No Load Current</h1>
+<div class="container">
+  <h1 class="m-5 text-center">
+    Measurement of No Load Loss and No Load Current
+  </h1>
   <form [formGroup]="form9" (ngSubmit)="createPage9Data(form9)">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <div class="input-group">
-        <div class="input-group-text">
-          TRANSFORMER ENERGIZED FROM 
-        </div>
-        <input type="text" class="form-control" value="HV    33 KV" disabled />
-      </div>
-      <div class="input-group mt-3">
-        <div class="input-group-text">GUAR. NO LOAD LOSS AT 100% VOLTAGE</div>
-        <input type="text" class="form-control" value="4800 Watts" disabled />
-      </div>
-      <div class="d-flex mt-3">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
         <div class="input-group">
-          <div class="input-group-text">CTR</div>
-          <input 
+          <div class="input-group-text">TRANSFORMER ENERGIZED FROM</div>
+          <input
+            type="text"
+            class="form-control"
+            value="HV    33 KV"
+            disabled
+          />
+        </div>
+        <div class="input-group mt-3">
+          <div class="input-group-text">GUAR. NO LOAD LOSS AT 100% VOLTAGE</div>
+          <input type="text" class="form-control" value="4800 Watts" disabled />
+        </div>
+        <div class="d-flex mt-3">
+          <div class="input-group">
+            <div class="input-group-text">CTR</div>
+            <input
               type="number"
               class="form-control"
               value="1"
               formControlName="CTR"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('CTR')?.valid && form9.get('CTR')?.touched,
+                'is-invalid':
+                  !form9.get('CTR')?.valid && form9.get('CTR')?.touched
+              }"
               (ngModelChange)="handleCTR($event)"
-              />
-        </div>
-        <div class="input-group ms-2">
-          <div class="input-group-text">PTR</div>
-          <input 
+            />
+            <span class="invalid-feedback">Please enter value of CTR</span>
+          </div>
+          <div class="input-group ms-2">
+            <div class="input-group-text">PTR</div>
+            <input
               type="number"
               class="form-control"
               value="300"
               formControlName="PTR"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('PTR')?.valid && form9.get('PTR')?.touched,
+                'is-invalid':
+                  !form9.get('PTR')?.valid && form9.get('PTR')?.touched
+              }"
               (ngModelChange)="handlePTR($event)"
-              />
+            />
+            <span class="invalid-feedback">Please enter value of PTR</span>
+          </div>
         </div>
-      </div>
-      <div class="d-flex mt-3">
-        <div class="input-group">
-          <div class="input-group-text">% No Load Current</div>
-          <input type="text" class="form-control" value="0.05 %" disabled />
-        </div>
-        <div class="input-group ms-2">
-          <div class="input-group-text">HV Current</div>
-          <input type="text" class="form-control" value="61.23" disabled />
+        <div class="d-flex mt-3">
+          <div class="input-group">
+            <div class="input-group-text">% No Load Current</div>
+            <input type="text" class="form-control" value="0.05 %" disabled />
+          </div>
+          <div class="input-group ms-2">
+            <div class="input-group-text">HV Current</div>
+            <input type="text" class="form-control" value="61.23" disabled />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <table
-      class="table mt-4 table-striped table-bordered table-hover table-condensed"
-    >
-      <thead class="bg-primary">
-        <tr>
-          <th colspan="2">Voltage (V)</th>
-          <th colspan="2">Current (mA)</th>
-          <th colspan="2">Power (W)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>V1</td>
-          <td>
-            <input 
-              type="number" 
-              class="form-control"
-              formControlName="V1"
+    <div class="container">
+      <table
+        class="table mt-4 table-striped table-bordered table-hover table-condensed"
+      >
+        <thead class="bg-primary">
+          <tr>
+            <th colspan="2">Voltage (V)</th>
+            <th colspan="2">Current (mA)</th>
+            <th colspan="2">Power (W)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>V1</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="V1"
                 [ngClass]="{
                   'is-valid':
                     form9.get('V1')?.valid && form9.get('V1')?.touched,
@@ -75,227 +94,258 @@
                 (ngModelChange)="handleV1($event)"
               />
               <span class="invalid-feedback">Please enter value of v1</span>
-          </td>
+            </td>
 
-          <td>I1</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="I1"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('I1')?.valid && form9.get('I1')?.touched,
-                'is-invalid':
-                  !form9.get('I1')?.valid && form9.get('I1')?.touched
-              }"
-              (ngModelChange)="handleI1($event)"
-            />
-            <span class="invalid-feedback">Please enter value of I1</span>
-          </td>
-          
-          <td>P1</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="P1"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('P1')?.valid && form9.get('P1')?.touched,
-                'is-invalid':
-                  !form9.get('P1')?.valid && form9.get('P1')?.touched
-              }"
-              (ngModelChange)="handleP1($event)"
-            />
-            <span class="invalid-feedback">Please enter value of P1</span></td>
-        </tr>
-
-        <!--  -->
-
-        <tr>
-          <td>V2</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="V2"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('V2')?.valid && form9.get('V2')?.touched,
-                'is-invalid':
-                  !form9.get('V2')?.valid && form9.get('V2')?.touched
-              }"
-              (ngModelChange)="handleV2($event)"
-            />
-            <span class="invalid-feedback">Please enter value of V2</span></td>
-          <td>I2</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="I2"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('I2')?.valid && form9.get('I2')?.touched,
-                'is-invalid':
-                  !form9.get('I2')?.valid && form9.get('I2')?.touched
-              }"
-              (ngModelChange)="handleI2($event)"
-            />
-            <span class="invalid-feedback">Please enter value of I2</span></td>
-          <td>P2</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="P2"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('P2')?.valid && form9.get('P2')?.touched,
-                'is-invalid':
-                  !form9.get('P2')?.valid && form9.get('P2')?.touched
-              }"
-              (ngModelChange)="handleP2($event)"
-            />
-            <span class="invalid-feedback">Please enter value of P2</span></td>
-        </tr>
-
-        <!--  -->
-
-        <tr>
-          <td>V3</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="V3"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('V3')?.valid && form9.get('V3')?.touched,
-                'is-invalid':
-                  !form9.get('V3')?.valid && form9.get('V3')?.touched
-              }"
-              (ngModelChange)="handleV3($event)"
-            />
-            <span class="invalid-feedback">Please enter value of V3</span></td>
-          <td>I3</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="I3"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('I3')?.valid && form9.get('I3')?.touched,
-                'is-invalid':
-                  !form9.get('I3')?.valid && form9.get('I3')?.touched
-              }"
-              (ngModelChange)="handleI3($event)"
-            />
-            <span class="invalid-feedback">Please enter value of I3</span></td>
-          <td>P3</td>
-          <td>
-            <input 
-            type="number" 
-            class="form-control"
-            formControlName="P3"
-              [ngClass]="{
-                'is-valid':
-                  form9.get('P3')?.valid && form9.get('P3')?.touched,
-                'is-invalid':
-                  !form9.get('P3')?.valid && form9.get('P3')?.touched
-              }"
-              (ngModelChange)="handleP3($event)"
-            />
-            <span class="invalid-feedback">Please enter value of P3</span>
-          </td>
-        </tr>
-
-        <!--  -->
-
-        <tr>
-          <td>V</td>
-          <td>
-            <input 
-              type="number"
-              class="form-control"
-              readonly
-              value="{{ VavgData }}"
+            <td>I1</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="I1"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('I1')?.valid && form9.get('I1')?.touched,
+                  'is-invalid':
+                    !form9.get('I1')?.valid && form9.get('I1')?.touched
+                }"
+                (ngModelChange)="handleI1($event)"
               />
-          </td>
-          <td>I</td>
-          <td>
-            <input 
-              type="number"
-              class="form-control"
-              readonly
-              value="{{ IavgData }}"
+              <span class="invalid-feedback">Please enter value of I1</span>
+            </td>
 
+            <td>P1</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="P1"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('P1')?.valid && form9.get('P1')?.touched,
+                  'is-invalid':
+                    !form9.get('P1')?.valid && form9.get('P1')?.touched
+                }"
+                (ngModelChange)="handleP1($event)"
               />
-          </td>
-          <td>P</td>
-          <td>
-            <input 
-              type="number"
-              class="form-control"
-              readonly
-              value="{{ PsumData }}"
-              />
-          </td>
-        </tr>
+              <span class="invalid-feedback">Please enter value of P1</span>
+            </td>
+          </tr>
 
-        <!--  -->
+          <!--  -->
 
-        <tr>
-          <td>Vapplied</td>
-          <td>
-            <input 
-              type="number"
-              class="form-control"
-              readonly
-              value="{{ VappData }}"
+          <tr>
+            <td>V2</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="V2"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('V2')?.valid && form9.get('V2')?.touched,
+                  'is-invalid':
+                    !form9.get('V2')?.valid && form9.get('V2')?.touched
+                }"
+                (ngModelChange)="handleV2($event)"
               />
-          </td>
-          <td>I (N.L.)</td>
-          <td>
-            <input 
-              type="number"
-              class="form-control"
-              readonly
-              value="{{ InlData }}"
+              <span class="invalid-feedback">Please enter value of V2</span>
+            </td>
+            <td>I2</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="I2"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('I2')?.valid && form9.get('I2')?.touched,
+                  'is-invalid':
+                    !form9.get('I2')?.valid && form9.get('I2')?.touched
+                }"
+                (ngModelChange)="handleI2($event)"
               />
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+              <span class="invalid-feedback">Please enter value of I2</span>
+            </td>
+            <td>P2</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="P2"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('P2')?.valid && form9.get('P2')?.touched,
+                  'is-invalid':
+                    !form9.get('P2')?.valid && form9.get('P2')?.touched
+                }"
+                (ngModelChange)="handleP2($event)"
+              />
+              <span class="invalid-feedback">Please enter value of P2</span>
+            </td>
+          </tr>
 
-    <table
-      class="table mt-4 table-striped table-bordered table-hover table-condensed"
-    >
-      <tbody>
-        <tr>
-          <td>No Load Loss</td>
-          <td>
-            <input 
-              type="number" 
-              class="form-control" 
-              value="{{NoLoadData}}" 
-              readonly />
-          </td>
-          <td><input type="text" class="form-control" value="W" disabled></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div>
-    <button class="btn btn-primary text-center m-4" [routerLink]="['/tests']">
-      Save and Next
-    </button>
-    
-  </div>
-</form>
+          <!--  -->
+
+          <tr>
+            <td>V3</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="V3"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('V3')?.valid && form9.get('V3')?.touched,
+                  'is-invalid':
+                    !form9.get('V3')?.valid && form9.get('V3')?.touched
+                }"
+                (ngModelChange)="handleV3($event)"
+              />
+              <span class="invalid-feedback">Please enter value of V3</span>
+            </td>
+            <td>I3</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="I3"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('I3')?.valid && form9.get('I3')?.touched,
+                  'is-invalid':
+                    !form9.get('I3')?.valid && form9.get('I3')?.touched
+                }"
+                (ngModelChange)="handleI3($event)"
+              />
+              <span class="invalid-feedback">Please enter value of I3</span>
+            </td>
+            <td>P3</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="P3"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('P3')?.valid && form9.get('P3')?.touched,
+                  'is-invalid':
+                    !form9.get('P3')?.valid && form9.get('P3')?.touched
+                }"
+                (ngModelChange)="handleP3($event)"
+              />
+              <span class="invalid-feedback">Please enter value of P3</span>
+            </td>
+          </tr>
+
+          <!--  -->
+
+          <tr>
+            <td>V</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ VavgData }}"
+                formControlName="V_AVG"
+              />
+            </td>
+            <td>I</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ IavgData }}"
+                formControlName="I_AVG"
+              />
+            </td>
+            <td>P</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ PsumData }}"
+                formControlName="P_AVG"
+              />
+            </td>
+          </tr>
+
+          <!--  -->
+
+          <tr>
+            <td>Vapplied</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ VappData }}"
+              />
+            </td>
+            <td>I (N.L.)</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                readonly
+                value="{{ InlData }}"
+              />
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table
+        class="table mt-4 table-striped table-bordered table-hover table-condensed"
+      >
+        <tbody>
+          <tr>
+            <td>No Load Loss</td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                value="{{ NoLoadData }}"
+                readonly
+              />
+            </td>
+            <td>
+              <input type="text" class="form-control" value="W" disabled />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+            (change)="handleCalculation($event)"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            If you want to see the calculation part then please check this
+          </label>
+        </div>
+        <div class="mt-3 fs-6" *ngIf="isShowCalculationPart">
+          No Load Loss = (P * M.F) / 1000 = {{ (PsumData * CTR * PTR) / 1000 }}W
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button
+        class="btn btn-primary m-4"
+        [routerLink]="['/tests']"
+        type="submit"
+      >
+        Save and Next
+      </button>
+    </div>
+  </form>
 </div>
 

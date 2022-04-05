@@ -1,5 +1,5 @@
-<div class="text-center mt-4">
-  <h1>INDUCED OVER VOLTAGE WITHSTAND TEST</h1>
+<div class="mt-4">
+  <h1 class="text-center">INDUCED OVER VOLTAGE WITHSTAND TEST</h1>
   <div class="container">
     <form [formGroup]="form12" (ngSubmit)="createPage12FromData(form12)">
       <table
@@ -26,12 +26,80 @@
           </tr>
 
           <tr>
-            <td><input type="number" class="form-control" readonly /></td>
-            <td><input type="number" class="form-control" /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="reatedVoltagepage12"
+                [ngClass]="{
+                  'is-valid':
+                    form12.get('reatedVoltagepage12')?.valid &&
+                    form12.get('reatedVoltagepage12')?.touched,
+                  'is-invalid':
+                    !form12.get('reatedVoltagepage12')?.valid &&
+                    form12.get('reatedVoltagepage12')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter value of rated voltage</span
+              >
+            </td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="testedVoltagePage12"
+                [ngClass]="{
+                  'is-valid':
+                    form12.get('testedVoltagePage12')?.valid &&
+                    form12.get('testedVoltagePage12')?.touched,
+                  'is-invalid':
+                    !form12.get('testedVoltagePage12')?.valid &&
+                    form12.get('testedVoltagePage12')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter value of tested voltage</span
+              >
+            </td>
 
-            <td><input type="number" class="form-control" /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="testedTimePage12"
+                [ngClass]="{
+                  'is-valid':
+                    form12.get('testedTimePage12')?.valid &&
+                    form12.get('testedTimePage12')?.touched,
+                  'is-invalid':
+                    !form12.get('testedTimePage12')?.valid &&
+                    form12.get('testedTimePage12')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter value of tested time</span
+              >
+            </td>
 
-            <td><input type="number" class="form-control" /></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="frequencePage12"
+                [ngClass]="{
+                  'is-valid':
+                    form12.get('frequencePage12')?.valid &&
+                    form12.get('frequencePage12')?.touched,
+                  'is-invalid':
+                    !form12.get('frequencePage12')?.valid &&
+                    form12.get('frequencePage12')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter value of frequency</span
+              >
+            </td>
           </tr>
         </tbody>
       </table>
@@ -44,8 +112,15 @@
               class="form-control"
               placeholder="Please add remark here"
               formControlName="remark"
+              [ngClass]="{
+                'is-valid':
+                  form12.get('remark')?.valid && form12.get('remark')?.touched,
+                'is-invalid':
+                  !form12.get('remark')?.valid && form12.get('remark')?.touched
+              }"
               (ngModelChange)="isAddremarkpage12($event)"
             />
+            <span class="invalid-feedback">Please enter remark</span>
             <button
               class="btn btn-primary mx-2"
               type="button"
@@ -56,7 +131,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="text-center">
         <button
           class="btn btn-primary mt-4"
           [routerLink]="['/tests']"
