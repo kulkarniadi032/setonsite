@@ -1,3 +1,4 @@
+import { EleventhPageService } from './../../services/eleventh-page.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { SecondPageService } from 'src/app/services/second-page.service';
@@ -9,9 +10,12 @@ import { SecondPageService } from 'src/app/services/second-page.service';
 })
 export class Page11Component implements OnInit {
   page2DataLoadInPage11: any;
-  constructor(private page2: SecondPageService) {
+  constructor(
+    private page2: SecondPageService,
+    private page11: EleventhPageService
+  ) {
     console.log('get data from page2');
-    this.page2DataLoadInPage11 = this.page2.page2Data;
+    this.page2DataLoadInPage11 = this.page2?.page2Data;
     console.log(this.page2DataLoadInPage11);
   }
 
@@ -34,8 +38,10 @@ export class Page11Component implements OnInit {
     testVoltLV: new FormControl('', [Validators.required]),
     testTimeLV: new FormControl('', [Validators.required]),
     freqLV: new FormControl('', [Validators.required]),
+    BDVOFOilSampple: new FormControl('', [Validators.required]),
   });
   createPage11FormData(data: any) {
     console.log(data.value);
+    this.page11.createpage11DataService(data.value);
   }
 }

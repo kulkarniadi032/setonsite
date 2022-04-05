@@ -22,9 +22,20 @@
             <input
               type="number"
               class="form-control"
-              value="{{ page2DataLoadInPage11.ratedVoltageHV }}"
+              value="{{ page2DataLoadInPage11?.ratedVoltageHV }}"
               formControlName="reatedVoltageHV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('reatedVoltageHV')?.valid &&
+                  form11.get('reatedVoltageHV')?.touched,
+                'is-invalid':
+                  !form11.get('reatedVoltageHV')?.valid &&
+                  form11.get('reatedVoltageHV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
           <td>
             <input
@@ -32,7 +43,18 @@
               id="testVoltHV"
               class="form-control"
               formControlName="testVoltHV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('testVoltHV')?.valid &&
+                  form11.get('testVoltHV')?.touched,
+                'is-invalid':
+                  !form11.get('testVoltHV')?.valid &&
+                  form11.get('testVoltHV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
           <td>
             <input
@@ -40,7 +62,18 @@
               id="testTimeHV"
               class="form-control"
               formControlName="testTimeHV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('testTimeHV')?.valid &&
+                  form11.get('testTimeHV')?.touched,
+                'is-invalid':
+                  !form11.get('testTimeHV')?.valid &&
+                  form11.get('testTimeHV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
           <td>
             <input
@@ -48,7 +81,16 @@
               id="freqHV"
               class="form-control"
               formControlName="freqHV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('freqHV')?.valid && form11.get('freqHV')?.touched,
+                'is-invalid':
+                  !form11.get('freqHV')?.valid && form11.get('freqHV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
         </tr>
         <tr>
@@ -58,30 +100,72 @@
               type="number"
               id="reatedVoltageLV"
               class="form-control"
-              value="{{ page2DataLoadInPage11.ratedVoltageLV }}"
+              value="{{ page2DataLoadInPage11?.ratedVoltageLV }}"
               formControlName="reatedVoltageLV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('reatedVoltageLV')?.valid &&
+                  form11.get('reatedVoltageLV')?.touched,
+                'is-invalid':
+                  !form11.get('reatedVoltageLV')?.valid &&
+                  form11.get('reatedVoltageLV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
           <td>
             <input
               type="number"
               class="form-control"
               formControlName="testVoltLV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('testVoltLV')?.valid &&
+                  form11.get('testVoltLV')?.touched,
+                'is-invalid':
+                  !form11.get('testVoltLV')?.valid &&
+                  form11.get('testVoltLV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
           <td>
             <input
               type="number"
               class="form-control"
               formControlName="testTimeLV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('testTimeLV')?.valid &&
+                  form11.get('testTimeLV')?.touched,
+                'is-invalid':
+                  !form11.get('testTimeLV')?.valid &&
+                  form11.get('testTimeLV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
           <td>
             <input
               type="number"
               class="form-control"
               formControlName="freqLV"
+              [ngClass]="{
+                'is-valid':
+                  form11.get('freqLV')?.valid && form11.get('freqLV')?.touched,
+                'is-invalid':
+                  !form11.get('freqLV')?.valid && form11.get('freqLV')?.touched
+              }"
             />
+            <span class="invalid-feedback"
+              >Please enter value for v rated for HV</span
+            >
           </td>
         </tr>
       </tbody>
@@ -92,7 +176,24 @@
       <div class="col-md-6 offset-md-3">
         <div class="input-group">
           <div class="input-group-text">BDV of OIL Sample</div>
-          <input type="text" class="form-control" value="68 kV" />
+          <input
+            type="number"
+            class="form-control"
+            value=""
+            formControlName="BDVOFOilSampple"
+            [ngClass]="{
+              'is-valid':
+                form11.get('BDVOFOilSampple')?.valid &&
+                form11.get('BDVOFOilSampple')?.touched,
+              'is-invalid':
+                !form11.get('BDVOFOilSampple')?.valid &&
+                form11.get('BDVOFOilSampple')?.touched
+            }"
+          />
+          <span class="invalid-feedback"
+            >Please enter value for v rated for HV</span
+          >
+          <div class="input-group-text">KV</div>
         </div>
       </div>
     </div>
