@@ -1,6 +1,7 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ThirdPageService } from 'src/app/services/third-page.service';
+import { NinthPageService } from 'src/app/services/ninth-page.service';
 
 @Component({
   selector: 'app-page9',
@@ -8,7 +9,7 @@ import { ThirdPageService } from 'src/app/services/third-page.service';
   styleUrls: ['./page9.component.css'],
 })
 export class Page9Component implements OnInit {
-  constructor() {}
+  constructor(private page9: NinthPageService) {}
 
   ngOnInit(): void {}
 
@@ -26,10 +27,16 @@ export class Page9Component implements OnInit {
     PTR: new FormControl('', [Validators.required]),
     V_AVG: new FormControl('', [Validators.required]),
     I_AVG: new FormControl('', [Validators.required]),
+    P_AVG: new FormControl('', [Validators.required]),
   });
 
   createPage9Data(data: any) {
-    console.log(data.value);
+    this.page9.createPage9DataService({
+      ...data.value,
+      P_AVG: this.PsumData,
+      V_AVG: this.VavgData,
+      I_AVG: this.IavgData,
+    });
   }
 
   V1: any;
@@ -58,6 +65,7 @@ export class Page9Component implements OnInit {
   handleP1(data: any) {
     this.P1 = data;
     this.Psum();
+    this.NoLoad();
   }
 
   handleV2(data: any) {
@@ -73,6 +81,7 @@ export class Page9Component implements OnInit {
   handleP2(data: any) {
     this.P2 = data;
     this.Psum();
+    this.NoLoad();
   }
 
   handleV3(data: any) {
@@ -88,6 +97,7 @@ export class Page9Component implements OnInit {
   handleP3(data: any) {
     this.P3 = data;
     this.Psum();
+    this.NoLoad();
   }
 
   handleCTR(data: any) {
@@ -133,7 +143,6 @@ export class Page9Component implements OnInit {
 
   isShowCalculationPart: boolean = false;
   handleCalculation(e: any) {
-    console.log(e.target.checked);
     this.isShowCalculationPart = e.target.checked;
   }
 }

@@ -247,6 +247,7 @@
                 class="form-control"
                 readonly
                 value="{{ VavgData }}"
+                formControlName="V_AVG"
               />
             </td>
             <td>I</td>
@@ -256,6 +257,7 @@
                 class="form-control"
                 readonly
                 value="{{ IavgData }}"
+                formControlName="I_AVG"
               />
             </td>
             <td>P</td>
@@ -265,6 +267,7 @@
                 class="form-control"
                 readonly
                 value="{{ PsumData }}"
+                formControlName="P_AVG"
               />
             </td>
           </tr>
@@ -335,7 +338,11 @@
       </div>
     </div>
     <div class="text-center">
-      <button class="btn btn-primary m-4" [routerLink]="['/tests']">
+      <button
+        class="btn btn-primary m-4"
+        [routerLink]="['/tests']"
+        type="submit"
+      >
         Save and Next
       </button>
     </div>
