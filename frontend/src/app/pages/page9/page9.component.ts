@@ -1,5 +1,6 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { ThirdPageService } from 'src/app/services/third-page.service';
 
 
 @Component({
@@ -11,83 +12,126 @@ export class Page9Component implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
   form9 = new FormGroup({
-    v1: new FormControl('', [Validators.required]),
-    i1: new FormControl('', [Validators.required]),
-    p1: new FormControl('', [Validators.required]),
-    v2: new FormControl('', [Validators.required]),
-    i2: new FormControl('', [Validators.required]),
-    p2: new FormControl('', [Validators.required]),
-    v3: new FormControl('', [Validators.required]),
-    i3: new FormControl('', [Validators.required]),
-    p3: new FormControl('', [Validators.required]),
+    V1: new FormControl('', [Validators.required]),
+    I1: new FormControl('', [Validators.required]),
+    P1: new FormControl('', [Validators.required]),
+    V2: new FormControl('', [Validators.required]),
+    I2: new FormControl('', [Validators.required]),
+    P2: new FormControl('', [Validators.required]),
+    V3: new FormControl('', [Validators.required]),
+    I3: new FormControl('', [Validators.required]),
+    P3: new FormControl('', [Validators.required]),
+    CTR : new FormControl('',[Validators.required]),
+    PTR : new FormControl('',[Validators.required]),
+    V_AVG : new FormControl('',[Validators.required]),
+    I_AVG : new FormControl('',[Validators.required]),
+
   });
 
   createPage9Data(data: any) {
     console.log(data.value);
   }
 
-  v1: any;
-  i1: any;
-  p1: any;
-  v2: any;
-  i2: any;
-  p2: any;
-  v3: any;
-  i3: any;
-  p3: any;
+  V1: any;
+  I1: any;
+  P1: any;
+  V2: any;
+  I2: any;
+  P2: any;
+  V3: any;
+  I3: any;
+  P3: any;
+  CTR:any;
+  PTR:any;
+  V_AVG:any;
+  I_AVG:any;
 
-handlev1(data: any) {
-  this.v1 = data;
-  this.vAvg();
+handleV1(data: any) {
+  this.V1 = data;
+  this.Vavg();
+  this.Vapplied();
 }
-handlei1(data: any) {
-  this.i1 = data;
-  this.iAvg();
+handleI1(data: any) {
+  this.I1 = data;
+  this.Iavg();
 }
-handlep1(data: any) {
-  this.p1 = data;
-  this.pSum();
-}
-
-handlev2(data: any) {
-  this.v2 = data;
-  this.vAvg();
-}
-handlei2(data: any) {
-  this.i2 = data;
-  this.iAvg();
-}
-handlep2(data: any) {
-  this.p2 = data;
-  this.pSum();
+handleP1(data: any) {
+  this.P1 = data;
+  this.Psum();
 }
 
-handlev3(data: any) {
-  this.v3 = data;
-  this.vAvg();
+handleV2(data: any) {
+  this.V2 = data;
+  this.Vavg();
+  this.Vapplied();
 }
-handlei3(data: any) {
-  this.i3 = data;
-  this.iAvg();
+handleI2(data: any) {
+  this.I2 = data;
+  this.Iavg();
+  this.Inl();
 }
-handlep3(data: any) {
-  this.p3 = data;
-  this.pSum();
+handleP2(data: any) {
+  this.P2 = data;
+  this.Psum();
+}
+
+handleV3(data: any) {
+  this.V3 = data;
+  this.Vavg();
+  this.Vapplied();
+}
+handleI3(data: any) {
+  this.I3 = data;
+  this.Iavg();
+  this.Inl();
+}
+handleP3(data: any) {
+  this.P3 = data;
+  this.Psum();
 }
 
 
-vAvgData: any;
-iAvgData: any;
-pSumData: any;
+handleCTR(data:any){
+  this.CTR = data;
+  this.Iavg();
+  this.Inl();
+  this.NoLoad();
+}
+handlePTR(data:any){
+  this.PTR = data;
+  this.Vavg();
+  this.Vapplied();
+  this.NoLoad();
+}
 
-vAvg(){
-  this.vAvgData = (this.v1+this.v2+this.v3)/3;
-}
-iAvg(){
-  this.iAvgData = (this.i1+this.i2+this.i3)/3;
-}
-pSum(){
-  this.pSumData = this.p1+this.p2+this.p3;
-}
+
+  VavgData: any;
+  IavgData: any;
+  PsumData: any;
+  VappData : any;
+  InlData : any;
+  NoLoadData:any;
+
+  Vavg(){
+    this.VavgData = (this.V1 + this.V2 + this.V3 ) / 3;
+  }
+  Iavg(){
+    this.IavgData = (this.I1 + this.I2 + this.I3) / 3;
+  }
+  Psum(){
+    this.PsumData = this.P1 + this.P2 + this.P3;
+  }
+
+  Vapplied(){
+    this.VappData = ((this.V1 + this.V2 + this.V3 ) / 3 )* this.PTR ;
+  }
+  Inl(){
+    this.InlData = ((this.I1 + this.I2 + this.I3) / 3) * this.CTR;
+  }
+  NoLoad(){
+    this.NoLoadData = ((this.P1 + this.P2 + this.P3) * this.CTR * this.PTR)/1000;
+  }
+
 }
