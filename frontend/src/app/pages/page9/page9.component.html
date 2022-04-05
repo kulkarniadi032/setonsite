@@ -42,42 +42,190 @@
       <tbody>
         <tr>
           <td>V1</td>
-          <td><input type="number" class="form-control" id="p9v1" /></td>
+          <td>
+            <input 
+              type="number" 
+              class="form-control"
+              formControlName="v1"
+                [ngClass]="{
+                  'is-valid':
+                    form9.get('v1')?.valid && form9.get('v1')?.touched,
+                  'is-invalid':
+                    !form9.get('v1')?.valid && form9.get('v1')?.touched
+                }"
+                (ngModelChange)="handlev1($event)"
+              />
+              <span class="invalid-feedback">Please enter value of v1</span>
+          </td>
+
           <td>I1</td>
-          <td><input type="number" class="form-control" id="p9i1" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="i1"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('i1')?.valid && form9.get('i1')?.touched,
+                'is-invalid':
+                  !form9.get('i1')?.valid && form9.get('i1')?.touched
+              }"
+              (ngModelChange)="handlei1($event)"
+            />
+            <span class="invalid-feedback">Please enter value of i1</span>
+          </td>
+          
           <td>P1</td>
-          <td><input type="number" class="form-control" id="p9p1" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="p1"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('p1')?.valid && form9.get('p1')?.touched,
+                'is-invalid':
+                  !form9.get('p1')?.valid && form9.get('p1')?.touched
+              }"
+              (ngModelChange)="handlep1($event)"
+            />
+            <span class="invalid-feedback">Please enter value of p1</span></td>
         </tr>
+
+        <!--  -->
+
         <tr>
           <td>V2</td>
-          <td><input type="number" class="form-control" id="p9v2" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="v2"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('v2')?.valid && form9.get('v2')?.touched,
+                'is-invalid':
+                  !form9.get('v2')?.valid && form9.get('v2')?.touched
+              }"
+              (ngModelChange)="handlev2($event)"
+            />
+            <span class="invalid-feedback">Please enter value of v2</span></td>
           <td>I2</td>
-          <td><input type="number" class="form-control" id="p9i2" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="i2"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('i2')?.valid && form9.get('i2')?.touched,
+                'is-invalid':
+                  !form9.get('i2')?.valid && form9.get('i2')?.touched
+              }"
+              (ngModelChange)="handlei2($event)"
+            />
+            <span class="invalid-feedback">Please enter value of i2</span></td>
           <td>P2</td>
-          <td><input type="number" class="form-control" id="p9p2" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="p2"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('p2')?.valid && form9.get('p2')?.touched,
+                'is-invalid':
+                  !form9.get('p2')?.valid && form9.get('p2')?.touched
+              }"
+              (ngModelChange)="handlep2($event)"
+            />
+            <span class="invalid-feedback">Please enter value of p2</span></td>
         </tr>
+
+        <!--  -->
+
         <tr>
           <td>V3</td>
-          <td><input type="number" class="form-control" id="p9v3" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="v3"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('v3')?.valid && form9.get('v3')?.touched,
+                'is-invalid':
+                  !form9.get('v3')?.valid && form9.get('v3')?.touched
+              }"
+              (ngModelChange)="handlev3($event)"
+            />
+            <span class="invalid-feedback">Please enter value of v3</span></td>
           <td>I3</td>
-          <td><input type="number" class="form-control" id="p9i3" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="i3"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('i3')?.valid && form9.get('i3')?.touched,
+                'is-invalid':
+                  !form9.get('i3')?.valid && form9.get('i3')?.touched
+              }"
+              (ngModelChange)="handlei3($event)"
+            />
+            <span class="invalid-feedback">Please enter value of i3</span></td>
           <td>P3</td>
-          <td><input type="number" class="form-control" id="p9p3" /></td>
+          <td>
+            <input 
+            type="number" 
+            class="form-control"
+            formControlName="p3"
+              [ngClass]="{
+                'is-valid':
+                  form9.get('p3')?.valid && form9.get('p3')?.touched,
+                'is-invalid':
+                  !form9.get('p3')?.valid && form9.get('p3')?.touched
+              }"
+              (ngModelChange)="handlep3($event)"
+            />
+            <span class="invalid-feedback">Please enter value of p3</span></td>
         </tr>
+
+        <!--  -->
+
         <tr>
           <td>V</td>
           <td>
-            <input type="number" class="form-control" id="p9v" readonly />
+            <input 
+              type="number"
+              class="form-control"
+              readonly
+              value="{{ vAvgData }}"
+              />
           </td>
           <td>I</td>
           <td>
-            <input type="number" class="form-control" id="p9i" readonly />
+            <input 
+              type="number"
+              class="form-control"
+              readonly
+              value="{{ iAvgData }}"
+              />
           </td>
           <td>P</td>
           <td>
-            <input type="number" class="form-control" id="p9p" readonly />
+            <input 
+              type="number"
+              class="form-control"
+              readonly
+              value="{{ pSumData }}"
+              />
           </td>
         </tr>
+
+        <!--  -->
+
         <tr>
           <td>Vapplied</td>
           <td>
