@@ -1,6 +1,7 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private login: LoginService) {}
+  constructor(private login: LoginService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -26,10 +27,18 @@ export class LoginComponent implements OnInit {
       if (resultData.success == true) {
         this.isSuccessTrue = true;
         localStorage.setItem('setOnSitetoken', resultData.token);
+        setTimeout(() => {
+          this.isSuccessTrue = false;
+          this.router.navigate(['/page1']);
+        }, 2000);
       } else {
         this.isSuccessFalse = true;
+        setTimeout(() => {
+          this.isSuccessFalse = false;
+        }, 5000);
       }
     });
+    setTimeout(() => {}, 2000);
     this.loginForm.reset();
   }
 }

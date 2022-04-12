@@ -1,3 +1,4 @@
+import { LoginComponent } from './pages/login/login.component';
 import { Page12Component } from './pages/page12/page12.component';
 import { Page11Component } from './pages/page11/page11.component';
 import { Page10Component } from './pages/page10/page10.component';
@@ -16,7 +17,8 @@ import { Page9Component } from './pages/page9/page9.component';
 import { Page7Component } from './pages/page7/page7.component';
 
 const routes: Routes = [
-  { path: '', component: Page1Component },
+  { path: '', component: LoginComponent },
+  { path: 'page1', component: Page1Component },
   { path: 'page2', component: Page2Component },
   { path: 'page3', component: Page3Component },
   { path: 'MEASUREMENT OF INSULATION RESISTANCE', component: Page4Component },
