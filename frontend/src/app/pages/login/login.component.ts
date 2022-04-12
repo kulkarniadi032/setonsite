@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
       console.log(resultData);
       if (resultData.success == true) {
         this.isSuccessTrue = true;
+        localStorage.setItem('setOnSitetoken', resultData.token);
       } else {
         this.isSuccessFalse = true;
       }
