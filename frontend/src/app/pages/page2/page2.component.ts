@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SecondPageService } from 'src/app/services/second-page.service';
@@ -8,7 +9,7 @@ import { SecondPageService } from 'src/app/services/second-page.service';
   styleUrls: ['./page2.component.css'],
 })
 export class Page2Component implements OnInit {
-  constructor(private page2: SecondPageService) {}
+  constructor(private page2: SecondPageService, private router: Router) {}
   // type
   // ratedCapacity
   // ratedVoltageHV
@@ -44,5 +45,6 @@ export class Page2Component implements OnInit {
         console.log(this.page2CreatedFormArr);
       });
     this.page2Form.reset();
+    // this.router.navigate(['page3']);
   }
 }

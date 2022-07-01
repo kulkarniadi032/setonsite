@@ -21,9 +21,10 @@ import { Page8Component } from './pages/page8/page8.component';
 import { Page12Component } from './pages/page12/page12.component';
 import { Page11Component } from './pages/page11/page11.component';
 import { Page10Component } from './pages/page10/page10.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, Page1Component, Page2Component, Page3Component, Page4Component, Page5Component, TestsComponent, Page6Component, Page9Component, ViewPdfComponent, Page7Component, Page8Component, Page12Component, Page11Component, Page10Component],
+  declarations: [AppComponent, Page1Component, Page2Component, Page3Component, Page4Component, Page5Component, TestsComponent, Page6Component, Page9Component, ViewPdfComponent, Page7Component, Page8Component, Page12Component, Page11Component, Page10Component, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { FirstPageService } from 'src/app/services/first-page.service';
+import { SecondPageService } from 'src/app/services/second-page.service';
 
 @Component({
   selector: 'app-view-pdf',
@@ -8,9 +10,16 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./view-pdf.component.css'],
 })
 export class ViewPdfComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private page1: FirstPageService,
+    private page2: SecondPageService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.page1.getAllPage1DataService().subscribe((result: any) => {
+      console.log(result);
+    });
+  }
 
   // public openPDF(): void {
   //   // below line represent which page we want to convert into pdf

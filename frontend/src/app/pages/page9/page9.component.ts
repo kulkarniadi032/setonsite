@@ -131,14 +131,14 @@ export class Page9Component implements OnInit {
   }
 
   Vapplied() {
-    this.VappData = ((this.V1 + this.V2 + this.V3) / 3) * this.PTR;
+    this.VappData =
+      ((this.V1 + this.V2 + this.V3) / 3) * this.PTR * Math.pow(3, 1 / 2);
   }
   Inl() {
     this.InlData = ((this.I1 + this.I2 + this.I3) / 3) * this.CTR;
   }
   NoLoad() {
-    this.NoLoadData =
-      ((this.P1 + this.P2 + this.P3) * this.CTR * this.PTR) / 1000;
+    this.NoLoadData = (this.P1 + this.P2 + this.P3) * this.CTR * this.PTR;
   }
 
   isShowCalculationPart: boolean = false;
