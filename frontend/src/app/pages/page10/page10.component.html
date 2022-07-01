@@ -1,20 +1,15 @@
 <div class="container">
-  <h1>MEASUREMENT OF LOAD LOSS AND IMPEDANCE</h1>
-  <form action="">
-    <div class="form-row">
-      <div class="form-group">
+  <h1 class="text-center mt-5">MEASUREMENT OF LOAD LOSS AND IMPEDANCE</h1>
+  <form>
+    <div class="row">
+      <div class="form-group d-flex">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">
               Supply side :
             </span>
           </div>
-          <input
-            type="number"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
+          <input type="number" class="form-control" />
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -22,12 +17,7 @@
               short :
             </span>
           </div>
-          <input
-            type="number"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
+          <input type="number" class="form-control" />
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -35,13 +25,202 @@
               Ambient Temperature :
             </span>
           </div>
-          <input
-            type="number"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
+          <input type="number" class="form-control" />
         </div>
+      </div>
+      <div class="form-group d-flex">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              CTR
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              PTR
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              M.F.
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group d-flex">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              RATED CURRENT
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              RATED VOLTAGE
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group d-flex">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              Fr
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              Ft
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              TAP NO
+            </span>
+          </div>
+          <input type="number" class="form-control" />
+        </div>
+      </div>
+      <div class="container">
+        <table
+          class="table mt-4 table-striped table-bordered table-hover table-condensed"
+        >
+          <thead class="bg-primary">
+            <tr>
+              <th colspan="2">Voltage (V)</th>
+              <th colspan="2">Current (mA)</th>
+              <th colspan="2">Power (W)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>V1</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of v1</span>
+              </td>
+
+              <td>I1</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of I1</span>
+              </td>
+
+              <td>P1</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of P1</span>
+              </td>
+            </tr>
+
+            <!--  -->
+
+            <tr>
+              <td>V2</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of V2</span>
+              </td>
+              <td>I2</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of I2</span>
+              </td>
+              <td>P2</td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  formControlName="P2"
+                />
+                <span class="invalid-feedback">Please enter value of P2</span>
+              </td>
+            </tr>
+
+            <!--  -->
+
+            <tr>
+              <td>V3</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of V3</span>
+              </td>
+              <td>I3</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of I3</span>
+              </td>
+              <td>P3</td>
+              <td>
+                <input type="number" class="form-control" />
+                <span class="invalid-feedback">Please enter value of P3</span>
+              </td>
+            </tr>
+
+            <!--  -->
+
+            <tr>
+              <td>V(Avg)</td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  readonly
+                  formControlName="V_AVG"
+                />
+              </td>
+              <td>I(Avg)</td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  readonly
+                  formControlName="I_AVG"
+                />
+              </td>
+              <td>P(Sum)</td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  readonly
+                  formControlName="P_AVG"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>V(Act)</td>
+              <td>
+                <input type="number" class="form-control" readonly />
+              </td>
+              <td>I(Act)</td>
+              <td>
+                <input type="number" class="form-control" readonly />
+              </td>
+              <td>P(Act)</td>
+              <td>
+                <input type="number" class="form-control" readonly />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </form>

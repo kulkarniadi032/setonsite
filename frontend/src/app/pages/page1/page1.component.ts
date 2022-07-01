@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {
   FormArray,
@@ -14,7 +15,11 @@ import { FirstPageService } from 'src/app/services/first-page.service';
   styleUrls: ['./page1.component.css'],
 })
 export class Page1Component implements OnInit {
-  constructor(private page1: FirstPageService, private fb: FormBuilder) {
+  constructor(
+    private page1: FirstPageService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {
     this.witnessByForm = this.fb.group({
       witnessBy: this.fb.array([]),
     });
@@ -50,6 +55,9 @@ export class Page1Component implements OnInit {
     testedByPlace: new FormControl('', [Validators.required]),
   });
   createPage1Data(data: any) {
+    console.log('data');
+    console.log(data);
+
     console.log({ ...data.value, ...this.witnessByForm.value });
     this.page1
       .createPage1DataService({ ...data.value, ...this.witnessByForm.value })
@@ -59,6 +67,7 @@ export class Page1Component implements OnInit {
         this.getAllPage1Data();
       });
     this.form.reset();
+    this.router.navigate(['page2']);
   }
   deletePage1Data(id: any) {
     console.log(id);

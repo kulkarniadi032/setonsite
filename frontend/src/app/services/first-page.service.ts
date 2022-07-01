@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class FirstPageService {
   constructor(private http: HttpClient) {}
+  firstPageDataForPdf: any;
+
   createPage1DataService(data: any) {
+    this.firstPageDataForPdf = data;
     return this.http.post('http://localhost:5000/api/v1/page1', data);
   }
   getAllPage1DataService() {
